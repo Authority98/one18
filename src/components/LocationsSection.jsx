@@ -43,9 +43,9 @@ const LocationsSection = () => {
             <div className="container mx-auto px-6 relative z-10">
                 <div className="flex flex-col md:flex-row justify-between items-center mb-16">
                     <div className="text-center md:text-left">
-                        <h2 className="text-5xl md:text-6xl mb-4 font-abril">Find Your <br /> Nearest Bake</h2>
+                        <h2 className="text-5xl md:text-6xl mb-4 font-abril">Visit Us <br /> Today</h2>
                     </div>
-                    <p className="text-lg opacity-70 max-w-xs mt-6 md:mt-0 text-center md:text-right font-light border-l-2 border-[#E07A5F] pl-6">Open daily for all your breakfast, lunch, and tea time cravings.</p>
+                    <p className="text-lg opacity-70 max-w-xs mt-6 md:mt-0 text-center md:text-right font-light border-l-2 border-[#E07A5F] pl-6">Three convenient locations serving fresh pastries daily. Come taste the difference.</p>
                 </div>
 
                 <div className="grid md:grid-cols-3 gap-8">

@@ -6,7 +6,7 @@ const SupremeSection = () => {
         {
             title: "Pistachio",
             price: "$6.00",
-            desc: "Rich roasted pistachio cream with crushed nut topping.",
+            desc: "Silky pistachio cream with crunchy roasted nuts — pure indulgence.",
             tag: "Crowd Favorite",
             img: "https://images.unsplash.com/photo-1550617931-e17a7b70dce2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
             tagColor: "bg-[#F4F1DE] text-[#2C1810]"
@@ -14,7 +14,7 @@ const SupremeSection = () => {
         {
             title: "Nutella",
             price: "$6.00",
-            desc: "Hazelnut praline meets creamy Nutella ganache.",
+            desc: "Decadent Nutella ganache meets hazelnut praline heaven.",
             tag: "Sweet Tooth",
             img: "https://images.unsplash.com/photo-1534353473418-4cfa6c56fd38?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
             tagColor: "bg-[#E07A5F] text-white",
@@ -23,7 +23,7 @@ const SupremeSection = () => {
         {
             title: "Beef Rendang",
             price: "$7.80",
-            desc: "Tender, slow-cooked beef rendang in flaky pastry.",
+            desc: "Authentic slow-cooked beef rendang wrapped in buttery layers.",
             tag: "Savory Hit",
             img: "https://images.unsplash.com/photo-1505253716362-afaea1d3d1af?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80",
             tagColor: "bg-[#2C1810] text-[#F4F1DE]"
@@ -35,11 +35,11 @@ const SupremeSection = () => {
             <div className="container mx-auto px-6">
                 <div className="flex flex-col lg:flex-row justify-between items-end mb-16">
                     <div className="relative z-10">
-                        <span className="font-dancing text-4xl md:text-5xl text-[#E07A5F] block mb-2 transform -rotate-6 ml-4">Our Signatures</span>
-                        <h2 className="text-5xl md:text-7xl text-[#2C1810] font-abril">The Supreme <br /> Collection</h2>
+                        <span className="font-dancing text-4xl md:text-5xl text-[#E07A5F] block mb-2 transform -rotate-6 ml-4">Today's Selections</span>
+                        <h2 className="text-5xl md:text-7xl text-[#2C1810] font-abril">Supreme <br /> Circular Croissants</h2>
                     </div>
                     <p className="text-lg md:text-xl max-w-md text-gray-600 mt-6 lg:mt-0 relative z-10">
-                        Circular layers of joy. Crisp on the outside, exploding with house-made creams on the inside.
+                        Our signature creations — crispy, buttery perfection filled with premium ingredients that'll blow your mind.
                     </p>
                 </div>
 

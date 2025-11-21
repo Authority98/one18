@@ -14,20 +14,19 @@ const Hero = () => {
             <div className="container mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center relative z-10">
                 <div className="text-center lg:text-left order-2 lg:order-1">
                     <div className="inline-block bg-[#2C1810] text-[#F4F1DE] px-4 py-1 rounded-full text-sm font-bold tracking-widest mb-6 transform -rotate-2 shadow-lg">
-                        EST. TAMPINES • MUSLIM OWNED
+                        SINGAPORE'S FINEST • MUSLIM OWNED
                     </div>
                     <h1 className="text-5xl md:text-7xl lg:text-8xl leading-[0.9] mb-6 text-[#2C1810] font-abril">
-                        Roll With <br />
-                        <span className="text-stroke">The Best.</span>
+                        Singapore's <br />
+                        <span className="text-stroke">Finest Artisan Bakery</span>
                     </h1>
                     <p className="text-lg md:text-xl text-gray-700 mb-8 max-w-md mx-auto lg:mx-0 font-light leading-relaxed">
-                        Home of the viral <span className="font-bold text-[#E07A5F] relative inline-block">
+                        Discover our world-famous <span className="font-bold text-[#E07A5F] relative inline-block">
                             Supreme Circular Croissants
                             <svg className="absolute w-full h-2 bottom-0 left-0 text-[#E07A5F]/30" viewBox="0 0 100 10" preserveAspectRatio="none">
                                 <path d="M0 5 Q 50 10 100 5" stroke="currentColor" strokeWidth="2" fill="none" />
                             </svg>
-                        </span>.
-                        Crispy layers, 100% French butter, and fillings that overflow with joy.
+                        </span> — from luxury in the oven to perfection on your plate. Handcrafted with premium French butter and filled with extraordinary flavors.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                         <a href="#menu" className="group relative px-8 py-4 bg-[#2C1810] text-[#F4F1DE] font-bold rounded-full overflow-hidden shadow-lg">

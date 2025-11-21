@@ -4,8 +4,12 @@ import MobileMenu from './components/MobileMenu';
 import Hero from './components/Hero';
 import MarqueeDivider from './components/MarqueeDivider';
 import SupremeSection from './components/SupremeSection';
+import CategorySection from './components/CategorySection';
+import CateringSection from './components/CateringSection';
 import MenuSection from './components/MenuSection';
+import QualitySection from './components/QualitySection';
 import LocationsSection from './components/LocationsSection';
+import TestimonialsSection from './components/TestimonialsSection';
 import Footer from './components/Footer';
 import BackToTop from './components/BackToTop';
 
@@ -52,8 +56,12 @@ const App = () => {
             <Hero />
             <MarqueeDivider />
             <SupremeSection />
+            <CategorySection />
+            <CateringSection />
             <MenuSection />
+            <QualitySection />
             <LocationsSection />
+            <TestimonialsSection />
             <Footer />
             <BackToTop show={showBackToTop} onClick={scrollToTop} />
         </div>

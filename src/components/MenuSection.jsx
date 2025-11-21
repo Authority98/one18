@@ -5,13 +5,13 @@ const MenuSection = () => {
     const sweetItems = [
         {
             name: "Pain Au Chocolat",
-            desc: "Dark chocolate batons folded into 100% French butter layers.",
+            desc: "Premium dark chocolate batons wrapped in buttery, flaky perfection.",
             price: "$4.00",
             img: "https://images.unsplash.com/photo-1555507036-ab1f4038808a?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
         },
         {
             name: "Ondeh Ondeh Roll",
-            desc: "Soft pandan sponge, gula melaka cream, rolled with coconut.",
+            desc: "Pandan sponge with gula melaka cream and fresh coconut — a local favorite.",
             price: "$11.80",
             img: "https://images.unsplash.com/photo-1514517521153-1be72277b32f?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
         }
@@ -20,13 +20,13 @@ const MenuSection = () => {
     const savoryItems = [
         {
             name: "Sourdough Loaf",
-            desc: "Natural fermentation, crispy crust, chewy open crumb.",
+            desc: "Artisan sourdough with crispy crust and perfectly chewy crumb.",
             price: "$11.70",
             img: "https://images.unsplash.com/photo-1589985270826-4b7bb135bc9d?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
         },
         {
             name: "Chicken Satay Supreme",
-            desc: "Local fusion spiced chicken filling with peanut sauce notes.",
+            desc: "Spiced chicken with authentic peanut sauce notes — Singapore fusion at its best.",
             price: "$7.80",
             img: "https://images.unsplash.com/photo-1550950158-d0d960dff51b?ixlib=rb-4.0.3&auto=format&fit=crop&w=150&q=80"
         }
@@ -52,7 +52,7 @@ const MenuSection = () => {
 
             <div className="container mx-auto px-6 mt-10">
                 <div className="text-center mb-16">
-                    <h2 className="text-6xl text-[#2C1810] mb-4 font-abril">The Daily Bake</h2>
+                    <h2 className="text-6xl text-[#2C1810] mb-4 font-abril">Fresh Daily Bakes</h2>
                     <div className="w-24 h-1.5 bg-[#E07A5F] mx-auto rounded-full"></div>
                 </div>
 

@@ -11,8 +11,8 @@ const Footer = () => {
             <div className="container mx-auto px-6 relative z-10">
                 <div className="flex flex-col md:flex-row justify-between items-start gap-12">
                     <div className="max-w-sm">
-                        <h2 className="text-4xl font-bold mb-4 font-abril">Let's get baked.</h2>
-                        <p className="opacity-70 text-lg leading-relaxed">Your friendly Muslim-owned neighbourhood bakery serving artisanal French pastries with a local twist.</p>
+                        <h2 className="text-4xl font-bold mb-4 font-abril">Come Get Baked.</h2>
+                        <p className="opacity-70 text-lg leading-relaxed">Your go-to Muslim-owned artisan bakery bringing you premium French pastries with authentic local flavors — baked fresh daily. Catering available for events and special moments.</p>
                     </div>
 
                     <div className="flex flex-col gap-6">

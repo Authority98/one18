@@ -2,11 +2,11 @@ import React from 'react';
 
 const MarqueeDivider = () => {
     const items = [
-        "🥐 100% French Butter",
-        "Muslim Owned",
-        "Freshly Baked in Tampines",
-        "Viral Supreme Croissants",
-        "Artisanal Quality"
+        "🥐 Premium French Butter",
+        "Muslim Owned & Operated",
+        "Baked Fresh Daily in Singapore",
+        "Home of Viral Supreme Croissants",
+        "Artisan Quality Since Day One"
     ];
 
     return (
