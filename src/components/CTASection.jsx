@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight, Sparkles } from 'lucide-react';
+import SectionTag from './SectionTag';
 
 const CTASection = () => {
     return (
@@ -16,9 +17,9 @@ const CTASection = () => {
             </div>
 
             <div className="container mx-auto px-6 relative z-10 text-center">
-                <div className="inline-flex items-center gap-2 px-4 py-2 bg-[#2C1810]/5 backdrop-blur-md rounded-full text-[#E07A5F] font-bold text-sm uppercase tracking-widest mb-8 border border-[#2C1810]/10">
-                    <Sparkles className="w-4 h-4" /> Taste The Magic
-                </div>
+                <SectionTag rotate="rotate-2" className="mx-auto mb-8">
+                    <Sparkles className="w-4 h-4 inline-block mr-2" /> TASTE THE MAGIC
+                </SectionTag>
 
                 <h2 className="text-6xl md:text-8xl font-abril text-[#2C1810] mb-8 leading-tight">
                     Ready to Taste <br />

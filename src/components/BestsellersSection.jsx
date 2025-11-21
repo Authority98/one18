@@ -1,72 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { ShoppingBag, Star } from 'lucide-react';
+import { collectionData } from '../data/collectionData';
+import SectionTag from './SectionTag';
 
 const BestsellersSection = () => {
-    const [activeCategory, setActiveCategory] = useState('All');
-
-    const categories = ['All', 'Croissants', 'Cakes', 'Savory'];
-
-    const products = [
-        {
-            title: "Pistachio Supreme Croissant",
-            desc: "24-layer buttery croissant with Italian pistachio cream.",
-            tag: "BESTSELLER",
-            img: "https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=800&q=80",
-            tagColor: "bg-[#E07A5F] text-white",
-            height: "h-80 md:h-96",
-            category: "Croissants"
-        },
-        {
-            title: "Nutella Hazelnut Supreme",
-            desc: "Overflowing with Nutella & roasted Italian hazelnuts.",
-            tag: "NEW",
-            img: "https://images.unsplash.com/photo-1608198093002-ad4e005484ec?auto=format&fit=crop&w=800&q=80",
-            tagColor: "bg-[#2C1810] text-[#F4F1DE]",
-            height: "h-96 md:h-[500px]",
-            category: "Croissants"
-        },
-        {
-            title: "Viral Crookie",
-            desc: "The TikTok sensation - croissant meets cookie.",
-            tag: "VIRAL",
-            img: "https://images.unsplash.com/photo-1623334044303-241021148842?auto=format&fit=crop&w=800&q=80",
-            tagColor: "bg-[#F4F1DE] text-[#2C1810]",
-            height: "h-72 md:h-80",
-            category: "Croissants"
-        },
-        {
-            title: "Ondeh Ondeh Roll",
-            desc: "Pandan sponge with gula melaka & fresh coconut.",
-            tag: "LOCAL FAV",
-            img: "https://images.unsplash.com/photo-1509722747041-616f39b57569?auto=format&fit=crop&w=800&q=80",
-            tagColor: "bg-[#E07A5F] text-white",
-            height: "h-80 md:h-96",
-            category: "Cakes"
-        },
-        {
-            title: "Basque Burnt Cheesecake",
-            desc: "Creamy center with signature caramelized top.",
-            tag: "CLASSIC",
-            img: "https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&fit=crop&w=800&q=80",
-            tagColor: "bg-[#2C1810] text-[#F4F1DE]",
-            height: "h-72 md:h-80",
-            category: "Cakes"
-        },
-        {
-            title: "Sambal Ikan Bilis Bun",
-            desc: "Soft brioche with spicy sambal & crispy anchovies.",
-            tag: "SPICY",
-            img: "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?auto=format&fit=crop&w=800&q=80",
-            tagColor: "bg-[#F4F1DE] text-[#2C1810]",
-            height: "h-80 md:h-96",
-            category: "Savory"
-        }
-    ];
-
-    const filteredProducts = activeCategory === 'All'
-        ? products
-        : products.filter(product => product.category === activeCategory);
-
     return (
         <section id="bestsellers" className="py-32 bg-[#F9F7F2] relative overflow-hidden">
             {/* Decorative Elements */}
@@ -81,36 +18,17 @@ const BestsellersSection = () => {
             <div className="container mx-auto px-6 relative z-10">
                 <div className="flex flex-col items-center text-center mb-16">
                     <div className="relative z-10">
-                        <div className="inline-block bg-[#2C1810] text-[#F4F1DE] px-4 py-1 rounded-full text-sm font-bold tracking-widest mb-6 transform rotate-2 shadow-lg mx-auto">
+                        <SectionTag className="mx-auto">
                             CURATED FOR YOU • HANDCRAFTED DAILY
-                        </div>
+                        </SectionTag>
                         <h2 className="text-6xl md:text-8xl text-[#2C1810] font-abril leading-tight tracking-tight mb-8">
-                            The Collection
+                            Best Sellers
                         </h2>
-
-                        {/* Creative Category Filter */}
-                        <div className="flex flex-wrap justify-center gap-3 mb-8">
-                            {categories.map((cat) => (
-                                <button
-                                    key={cat}
-                                    onClick={() => setActiveCategory(cat)}
-                                    className={`
-                                        px-6 py-2 rounded-full text-sm font-bold tracking-wider transition-all duration-300 border-2
-                                        ${activeCategory === cat
-                                            ? 'bg-[#2C1810] text-[#F4F1DE] border-[#2C1810] shadow-lg scale-105'
-                                            : 'bg-transparent text-[#2C1810] border-[#2C1810]/20 hover:border-[#2C1810] hover:bg-[#2C1810]/5'}
-                                    `}
-                                >
-                                    {cat}
-                                </button>
-                            ))}
-                        </div>
-
                     </div>
                 </div>
 
                 <div className="columns-1 md:columns-2 lg:columns-3 gap-8 space-y-8">
-                    {filteredProducts.map((item, i) => (
+                    {collectionData.map((item, i) => (
                         <div key={i} className={`group relative break-inside-avoid rounded-[2rem] overflow-hidden cursor-pointer shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 ${item.height} animate-fade-in-up`}>
                             <img
                                 src={item.img}

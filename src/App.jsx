@@ -4,7 +4,6 @@ import MobileMenu from './components/MobileMenu';
 import Hero from './components/Hero';
 import BestsellersSection from './components/BestsellersSection';
 import CateringSection from './components/CateringSection';
-import CategorySection from './components/CategorySection';
 import QualitySection from './components/QualitySection';
 import LocationsSection from './components/LocationsSection';
 import TestimonialsSection from './components/TestimonialsSection';
@@ -55,7 +54,6 @@ const App = () => {
             <Hero />
             <BestsellersSection />
             <CateringSection />
-            <CategorySection />
             <QualitySection />
             <LocationsSection />
             <TestimonialsSection />

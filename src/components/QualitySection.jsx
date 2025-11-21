@@ -1,5 +1,6 @@
 import React from 'react';
 import { Globe, Scroll, Store, Sunrise } from 'lucide-react';
+import SectionTag from './SectionTag';
 
 const QualitySection = () => {
     const steps = [
@@ -63,13 +64,17 @@ const QualitySection = () => {
 
             <div className="container mx-auto px-6 relative z-10">
                 <div className="text-center mb-24">
-                    <span className="font-dancing text-4xl text-[#E07A5F] block mb-4">Behind The Scenes</span>
-                    <h2 className="text-6xl md:text-7xl text-[#2C1810] font-abril relative inline-block">
-                        The One18 Difference
-                        <svg className="absolute -bottom-4 left-0 w-full h-3 text-[#E07A5F]" viewBox="0 0 100 10" preserveAspectRatio="none">
-                            <path d="M0 5 Q 50 10 100 5" stroke="currentColor" strokeWidth="2" fill="none" />
-                        </svg>
-                    </h2>
+                    <div className="flex flex-col items-center">
+                        <SectionTag rotate="-rotate-2">
+                            BEHIND THE SCENES
+                        </SectionTag>
+                        <h2 className="text-6xl md:text-7xl text-[#2C1810] font-abril relative inline-block">
+                            The One18 Difference
+                            <svg className="absolute -bottom-4 left-0 w-full h-3 text-[#E07A5F]" viewBox="0 0 100 10" preserveAspectRatio="none">
+                                <path d="M0 5 Q 50 10 100 5" stroke="currentColor" strokeWidth="2" fill="none" />
+                            </svg>
+                        </h2>
+                    </div>
                 </div>
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-6">

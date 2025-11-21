@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Star, Play } from 'lucide-react';
 import VideoModal from './VideoModal';
+import SectionTag from './SectionTag';
 
 const Hero = () => {
     const [isVideoOpen, setIsVideoOpen] = useState(false);
@@ -13,9 +14,9 @@ const Hero = () => {
 
             <div className="container mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center relative z-10">
                 <div className="text-center lg:text-left order-2 lg:order-1">
-                    <div className="inline-block bg-[#2C1810] text-[#F4F1DE] px-4 py-1 rounded-full text-sm font-bold tracking-widest mb-6 transform -rotate-2 shadow-lg">
+                    <SectionTag rotate="-rotate-2">
                         SINGAPORE'S FINEST • MUSLIM OWNED
-                    </div>
+                    </SectionTag>
                     <h1 className="text-5xl md:text-7xl lg:text-8xl leading-[0.9] mb-6 text-[#2C1810] font-abril">
                         Singapore's <br />
                         <span className="text-stroke">Finest Artisan Bakery</span>

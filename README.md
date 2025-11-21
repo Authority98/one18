@@ -1,14 +1,16 @@
 # One18 Bakery Website
 
-A modern, component-based React website for One18 Bakery - home of the viral Supreme Circular Croissants.
+A modern, premium React website for One18 Bakery - Singapore's finest artisan bakery, home of the viral Supreme Circular Croissants.
 
 ## 🚀 Features
 
-- **Component-Based Architecture**: Modular, reusable components
-- **Responsive Design**: Mobile-first approach with beautiful animations
-- **Modern Tech Stack**: React 18 + Vite for fast development
-- **Premium UI/UX**: "Super creative" design with glassmorphism, parallax, and rich textures
-- **SEO Optimized**: Proper meta tags and semantic HTML
+- **Premium UI/UX**: Creative design with glassmorphism, parallax effects, and smooth animations
+- **Component-Based Architecture**: Reusable, modular React components
+- **Responsive Design**: Mobile-first approach with optimized layouts
+- **Modern Tech Stack**: React 18 + Vite + Tailwind CSS for fast development
+- **Interactive Elements**: Play buttons, hover effects, and dynamic content
+- **SEO Optimized**: Semantic HTML and proper meta tags
+- **Video Integration**: YouTube video modal with custom controls
 
 ## 📁 Project Structure
 
@@ -16,24 +18,30 @@ A modern, component-based React website for One18 Bakery - home of the viral Sup
 one18/
 ├── src/
 │   ├── components/
-│   │   ├── Navigation.jsx       # Main navigation bar
-│   │   ├── MobileMenu.jsx       # Mobile menu overlay
-│   │   ├── Hero.jsx             # Hero section with animations
-│   │   ├── MarqueeDivider.jsx   # Animated marquee divider
-│   │   ├── BestsellersSection.jsx # "Floating Gallery" bestsellers
-│   │   ├── CateringSection.jsx  # "Elegant Banquet" catering info
-│   │   ├── CategorySection.jsx  # "Interactive Menu" categories
-│   │   ├── QualitySection.jsx   # "The Process" quality timeline
-│   │   ├── LocationsSection.jsx # "Postcard View" locations
-│   │   ├── TestimonialsSection.jsx # "Wall of Love" reviews
-│   │   ├── CTASection.jsx       # "Grand Finale" call to action
-│   │   ├── Footer.jsx           # "Signature Footer" with social links
-│   │   └── BackToTop.jsx        # Scroll to top button
-│   ├── App.jsx                  # Main app component
-│   ├── main.jsx                 # React entry point
-│   └── index.css                # Global styles & animations
+│   │   ├── Navigation.jsx          # Fixed navigation with scroll effects
+│   │   ├── MobileMenu.jsx          # Mobile menu overlay
+│   │   ├── Hero.jsx                # Hero with video modal and floating elements
+│   │   ├── BestsellersSection.jsx  # Masonry gallery of best sellers
+│   │   ├── CateringSection.jsx     # Catering with play button overlays
+│   │   ├── QualitySection.jsx      # "The One18 Difference" timeline
+│   │   ├── LocationsSection.jsx    # Store locations with maps
+│   │   ├── TestimonialsSection.jsx # Horizontal scrolling reviews
+│   │   ├── CTASection.jsx          # Call-to-action section
+│   │   ├── Footer.jsx              # Footer with social links
+│   │   ├── VideoModal.jsx          # YouTube video modal
+│   │   ├── SectionTag.jsx          # Reusable section tag component
+│   │   └── BackToTop.jsx           # Scroll to top button
+│   ├── data/
+│   │   └── collectionData.js       # Product data for bestsellers
+│   ├── App.jsx                     # Main app component
+│   ├── main.jsx                    # React entry point
+│   └── index.css                   # Global styles & animations
+├── public/
+│   └── hero-croissant-v2.png       # Hero image
 ├── index.html
 ├── package.json
+├── tailwind.config.js
+├── postcss.config.js
 └── vite.config.js
 ```
 
@@ -48,6 +56,7 @@ one18/
    ```bash
    npm run dev
    ```
+   Open [http://localhost:5173](http://localhost:5173) in your browser
 
 3. **Build for production:**
    ```bash
@@ -62,74 +71,121 @@ one18/
 ## 🎨 Design System
 
 ### Colors
-- **Brand Dark**: `#2C1810` - Primary text and dark elements
+- **Brand Dark**: `#2C1810` - Primary text and section tags
 - **Brand Accent**: `#E07A5F` - Call-to-action and highlights
 - **Brand Gold**: `#F2CC8F` - Decorative accents
 - **Brand Cream**: `#F4F1DE` - Background and light elements
-- **Brand Green**: `#3D405B` - Secondary sections
+- **Background**: `#F9F7F2` - Main page background
 
 ### Typography
-- **Abril Fatface**: Headings and display text
+- **Abril Fatface**: Display headings and titles
 - **DM Sans**: Body text and UI elements
-- **Dancing Script**: Decorative script text
+- **Dancing Script**: Decorative script accents
 
-## 📦 Components Overview
+### Design Principles
+- Premium, artisanal aesthetic
+- Smooth animations and transitions
+- Consistent spacing and rhythm
+- Rich textures and depth
 
-### Navigation
-- Fixed navigation with scroll effects
-- Responsive mobile menu toggle
-- Smooth transitions
+## 📦 Key Components
 
-### Hero
-- Animated hero section with floating elements
-- Rotating text ring
-- Review card with star ratings
+### SectionTag
+Reusable pill-shaped tag component used across all sections for visual consistency.
+- Props: `children`, `className`, `rotate`
+- Default style: Dark background with light text
+
+### Hero Section
+- Video modal with YouTube integration
+- Rotating text ring animation
+- Floating review card
+- Play button with backdrop blur
 
 ### Bestsellers Section
-- "The Collection" premium gallery
-- Creative layout with "Curated for you" script
-- Interactive "View All" button with hover effects
-- Glassmorphism cards with parallax effects
+- Masonry grid layout for products
+- Product data from `collectionData.js`
+- Hover effects with image scaling
+- Link to external ordering system (Oddle)
 
 ### Catering Section
-- "Elegant Banquet" theme
-- Dark, rich visuals with gold accents
-- Interactive stats
-
-### Category Section
-- "Interactive Menu"
-- Large, immersive image panels
-- Hover expansion effects
+- Creative play button overlays on images
+- Pulsing animation effects
+- "Watch Video" hover text
+- Gradient background with soft glows
+- Mobile-optimized layout
 
 ### Quality Section
-- "The One18 Difference" visual flow
-- Staggered layout with dynamic connecting lines
-- Animated SVG paths and floating elements
-- Interactive cards with specific icons
+- 4-step process timeline
+- Staggered card layout
+- Animated SVG connecting lines
+- Tag positioned above title
 
-### Locations
-- "Postcard View" style
-- Stylized information blocks
-- Map integration
+### Testimonials Section
+- Horizontal scrolling card layout
+- User avatars and ratings
+- "Join the Family" call-to-action card
+- Snap scrolling for better UX
 
-### Testimonials
-- "Wall of Love"
-- Styled review cards
-- Social proof elements
+## 🔧 Technologies
 
-### CTA Section
-- "Grand Finale"
-- Rich gradients and pulse effects
-- High-conversion design
+- **React 18** - UI library
+- **Vite** - Build tool and dev server
+- **Tailwind CSS** - Utility-first CSS framework
+- **Lucide React** - Icon library
+- **PostCSS** - CSS processing
+- **Autoprefixer** - CSS vendor prefixing
+
+## 🌐 External Integrations
+
+- **Oddle**: Online ordering system
+  - Northbridge location: `https://one18bakerynorthbridge.oddle.me/en_SG`
+  - Main menu: `https://one18bakehouse.oddle.me/en_SG`
+- **YouTube**: Video content via VideoModal component
+- **Unsplash**: High-quality images for catering and products
+- **Pravatar**: User avatar placeholders
 
 ## 🚀 Deployment
 
-This project can be deployed to:
-- Vercel
-- Netlify
-- GitHub Pages
-- Any static hosting service
+This project can be deployed to any static hosting service:
+
+### Vercel (Recommended)
+```bash
+npm run build
+vercel --prod
+```
+
+### Netlify
+```bash
+npm run build
+# Deploy the 'dist' folder
+```
+
+### GitHub Pages
+```bash
+npm run build
+# Deploy the 'dist' folder to gh-pages branch
+```
+
+## 📱 Browser Support
+
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
+- Mobile browsers (iOS Safari, Chrome Mobile)
+
+## 🎯 Performance
+
+- Fast initial load with Vite
+- Optimized images from CDN (Unsplash)
+- Lazy loading for offscreen content
+- Smooth 60fps animations
+- Minimal bundle size
 
 ## 📄 License
 
 © 2025 One18 Bakery. All rights reserved.
+
+## 🙏 Credits
+
+Designed and developed for One18 Bakery, Singapore's premier artisan bakery specializing in Supreme Circular Croissants and French pastries.
