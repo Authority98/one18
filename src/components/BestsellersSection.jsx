@@ -4,56 +4,50 @@ import { ShoppingBag, Star } from 'lucide-react';
 const BestsellersSection = () => {
     const products = [
         {
-            title: "Almond Honey Croissant",
-            price: "$5.50",
-            desc: "Flaky croissant topped with almond cream and honey glaze.",
-            tag: "Best Seller",
-            img: "https://images.unsplash.com/photo-1555507036-ab1f4038808a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            title: "Pistachio Supreme Croissant",
+            desc: "24-layer buttery croissant with Italian pistachio cream.",
+            tag: "BESTSELLER",
+            img: "https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=800&q=80",
             tagColor: "bg-[#E07A5F] text-white",
             height: "h-80 md:h-96"
         },
         {
-            title: "Triple Chocolate Supreme",
-            price: "$6.50",
-            desc: "Decadent chocolate ganache filled supreme croissant.",
-            tag: "Must Try",
-            img: "https://images.unsplash.com/photo-1608198093002-ad4e005484ec?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            title: "Nutella Hazelnut Supreme",
+            desc: "Overflowing with Nutella & roasted Italian hazelnuts.",
+            tag: "NEW",
+            img: "https://images.unsplash.com/photo-1608198093002-ad4e005484ec?auto=format&fit=crop&w=800&q=80",
             tagColor: "bg-[#2C1810] text-[#F4F1DE]",
             height: "h-96 md:h-[500px]"
         },
         {
-            title: "Garlic Knot",
-            price: "$4.80",
-            desc: "Savory garlic butter knot with fresh herbs.",
-            tag: "Savory",
-            img: "https://images.unsplash.com/photo-1573140247632-f84660f67627?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            title: "Viral Crookie",
+            desc: "The TikTok sensation - croissant meets cookie.",
+            tag: "VIRAL",
+            img: "https://images.unsplash.com/photo-1623334044303-241021148842?auto=format&fit=crop&w=800&q=80",
             tagColor: "bg-[#F4F1DE] text-[#2C1810]",
             height: "h-72 md:h-80"
         },
         {
-            title: "Pulled Beef Roll",
-            price: "$7.20",
-            desc: "Slow-cooked pulled beef in a soft brioche roll.",
-            tag: "Lunch Special",
-            img: "https://images.unsplash.com/photo-1509722747041-616f39b57569?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            title: "Ondeh Ondeh Roll",
+            desc: "Pandan sponge with gula melaka & fresh coconut.",
+            tag: "LOCAL FAV",
+            img: "https://images.unsplash.com/photo-1509722747041-616f39b57569?auto=format&fit=crop&w=800&q=80",
             tagColor: "bg-[#E07A5F] text-white",
             height: "h-80 md:h-96"
         },
         {
-            title: "Spicy Chicken Floss",
-            price: "$5.00",
-            desc: "Soft bun topped with spicy chicken floss and mayo.",
-            tag: "Local Fav",
-            img: "https://images.unsplash.com/photo-1626814026160-2237a95fc5a0?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            title: "Basque Burnt Cheesecake",
+            desc: "Creamy center with signature caramelized top.",
+            tag: "CLASSIC",
+            img: "https://images.unsplash.com/photo-1533134242443-d4fd215305ad?auto=format&fit=crop&w=800&q=80",
             tagColor: "bg-[#2C1810] text-[#F4F1DE]",
             height: "h-72 md:h-80"
         },
         {
-            title: "Herbal Tea With Egg",
-            price: "$3.50",
-            desc: "Traditional herbal tea served with a tea egg.",
-            tag: "Classic",
-            img: "https://images.unsplash.com/photo-1517093725432-a9ac7d7d0da7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+            title: "Sambal Ikan Bilis Bun",
+            desc: "Soft brioche with spicy sambal & crispy anchovies.",
+            tag: "SPICY",
+            img: "https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?auto=format&fit=crop&w=800&q=80",
             tagColor: "bg-[#F4F1DE] text-[#2C1810]",
             height: "h-80 md:h-96"
         }
@@ -62,27 +56,39 @@ const BestsellersSection = () => {
     return (
         <section id="bestsellers" className="py-32 bg-[#F9F7F2] relative overflow-hidden">
             {/* Decorative Elements */}
-            <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[#E07A5F]/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3 pointer-events-none"></div>
-            <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-[#2C1810]/5 rounded-full blur-3xl translate-y-1/3 -translate-x-1/4 pointer-events-none"></div>
+            <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-[#E07A5F]/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3 pointer-events-none"></div>
+            <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-[#2C1810]/5 rounded-full blur-3xl translate-y-1/3 -translate-x-1/4 pointer-events-none"></div>
 
-            {/* Floating Text Texture */}
-            <div className="absolute top-20 left-10 font-abril text-[200px] leading-none text-[#2C1810]/5 pointer-events-none select-none rotate-12">
-                Fresh
-            </div>
+            {/* Abstract Background Shape */}
+            <svg className="absolute top-20 left-0 w-full h-full pointer-events-none opacity-10" viewBox="0 0 100 100" preserveAspectRatio="none">
+                <path d="M0 0 C 30 20 70 20 100 0 L 100 100 L 0 100 Z" fill="none" stroke="#E07A5F" strokeWidth="0.5" />
+            </svg>
 
             <div className="container mx-auto px-6 relative z-10">
-                <div className="flex flex-col md:flex-row justify-between items-end mb-20">
-                    <div className="max-w-2xl">
-                        <span className="font-dancing text-4xl md:text-5xl text-[#E07A5F] block mb-4 transform -rotate-2">Curated Favorites</span>
-                        <h2 className="text-6xl md:text-8xl text-[#2C1810] font-abril leading-[0.9]">
-                            Today's <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#E07A5F] to-[#2C1810]">Bestsellers</span>
+                <div className="flex flex-col md:flex-row justify-between items-end mb-24">
+                    <div className="max-w-3xl relative">
+                        <span className="font-dancing text-5xl text-[#E07A5F] block mb-2 relative z-10">Curated for you</span>
+                        <h2 className="text-7xl md:text-9xl text-[#2C1810] font-abril leading-[0.85] tracking-tighter">
+                            The <br />
+                            <span className="relative">
+                                Collection
+                                <svg className="absolute -bottom-2 left-0 w-full h-4 text-[#E07A5F]/30" viewBox="0 0 100 10" preserveAspectRatio="none">
+                                    <path d="M0 5 Q 50 10 100 5" stroke="currentColor" strokeWidth="8" fill="none" />
+                                </svg>
+                            </span>
                         </h2>
+                        {/* Decorative Circle behind title */}
+                        <div className="absolute -top-10 -left-10 w-32 h-32 border border-[#2C1810]/10 rounded-full -z-10 animate-spin-slow"></div>
                     </div>
-                    <div className="mt-8 md:mt-0">
-                        <a href="https://one18bakerynorthbridge.oddle.me/en_SG" target="_blank" rel="noreferrer" className="group flex items-center gap-4 text-[#2C1810] text-xl font-bold hover:text-[#E07A5F] transition-colors">
-                            <span className="border-b-2 border-[#2C1810] group-hover:border-[#E07A5F] transition-colors">View Full Menu</span>
-                            <div className="w-12 h-12 rounded-full border-2 border-[#2C1810] group-hover:border-[#E07A5F] flex items-center justify-center transition-all group-hover:rotate-45">
+
+                    <div className="mt-12 md:mt-0 md:mb-4">
+                        <a href="https://one18bakehouse.oddle.me/en_SG" target="_blank" rel="noreferrer" className="group flex items-center gap-4 text-[#2C1810] text-xl font-bold hover:text-[#E07A5F] transition-colors">
+                            <span className="relative overflow-hidden">
+                                <span className="block transform group-hover:-translate-y-full transition-transform duration-300">View All Items</span>
+                                <span className="absolute top-0 left-0 block transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 text-[#E07A5F]">View All Items</span>
+                                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-[#2C1810] group-hover:bg-[#E07A5F] transition-colors"></span>
+                            </span>
+                            <div className="w-12 h-12 rounded-full border-2 border-[#2C1810] group-hover:border-[#E07A5F] flex items-center justify-center transition-all group-hover:rotate-45 group-hover:scale-110">
                                 <ShoppingBag className="w-5 h-5" />
                             </div>
                         </a>
@@ -110,15 +116,10 @@ const BestsellersSection = () => {
 
                             {/* Content */}
                             <div className="absolute bottom-0 left-0 w-full p-8 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                                <div className="flex justify-between items-end mb-3">
-                                    <h3 className="text-3xl font-abril text-[#F4F1DE] leading-tight max-w-[70%]">{item.title}</h3>
-                                    <span className="text-2xl font-bold text-[#E07A5F]">{item.price}</span>
+                                <div className="mb-3">
+                                    <h3 className="text-3xl font-abril text-[#F4F1DE] leading-tight">{item.title}</h3>
                                 </div>
-                                <p className="text-[#F4F1DE]/80 text-sm mb-6 line-clamp-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">{item.desc}</p>
-
-                                <button className="w-full py-4 bg-white/10 backdrop-blur-md border border-white/20 text-white rounded-xl font-bold hover:bg-[#E07A5F] hover:border-[#E07A5F] transition-all flex items-center justify-center gap-2">
-                                    Add to Cart
-                                </button>
+                                <p className="text-[#F4F1DE]/80 text-sm mb-0 line-clamp-3 opacity-0 group-hover:opacity-100 transition-opacity duration-500 delay-100">{item.desc}</p>
                             </div>
                         </div>
                     ))}

@@ -86,9 +86,10 @@ one18/
 - Review card with star ratings
 
 ### Bestsellers Section
-- "Floating Gallery" concept
-- Glassmorphism cards
-- Parallax/scroll effects
+- "The Collection" premium gallery
+- Creative layout with "Curated for you" script
+- Interactive "View All" button with hover effects
+- Glassmorphism cards with parallax effects
 
 ### Catering Section
 - "Elegant Banquet" theme
@@ -101,9 +102,10 @@ one18/
 - Hover expansion effects
 
 ### Quality Section
-- "The Process" visual flow
-- Step-by-step timeline
-- Animated SVG paths
+- "The One18 Difference" visual flow
+- Staggered layout with dynamic connecting lines
+- Animated SVG paths and floating elements
+- Interactive cards with specific icons
 
 ### Locations
 - "Postcard View" style
