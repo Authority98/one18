@@ -52,7 +52,7 @@ const VideoModal = ({ isOpen, onClose }) => {
                         {/* Replace this with your actual video URL */}
                         <iframe
                             className="w-full h-full"
-                            src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=1&rel=0&modestbranding=1"
+                            src="https://www.youtube.com/embed/syMmU_qM2Ck?autoplay=1&rel=0&modestbranding=1"
                             title="One18 Bakery Video"
                             frameBorder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
