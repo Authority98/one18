@@ -1,75 +1,74 @@
 import React from 'react';
-import { MapPin, Utensils, Phone } from 'lucide-react';
+import { MapPin, Utensils, Phone, Navigation } from 'lucide-react';
 
 const LocationsSection = () => {
     const locations = [
         {
-            number: "01",
             title: "Tampines St 81",
             subtitle: "The Original",
             address: ["Blk 826 Tampines Street 81", "#01-118", "Singapore 520826"],
             icon: MapPin,
-            bgColor: "bg-[#F4F1DE]",
-            textColor: "text-[#2C1810]",
-            iconBg: "bg-[#E07A5F]"
+            rotate: "-rotate-2",
+            img: "https://images.unsplash.com/photo-1509722747041-616f39b57569?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
         },
         {
-            number: "02",
-            title: "Tampines St 23",
-            subtitle: "The New Spot",
-            address: ["Blk 201E Tampines St 23", "#01-64", "Singapore 527201"],
-            icon: MapPin,
-            bgColor: "bg-[#F4F1DE]",
-            textColor: "text-[#2C1810]",
-            iconBg: "bg-[#E07A5F]"
-        },
-        {
-            number: "03",
-            title: "North Bridge",
+            title: "North Bridge Rd",
             subtitle: "Buffet & Cafe",
             address: ["757 North Bridge Rd", "Singapore 198725"],
             icon: Utensils,
-            bgColor: "bg-[#E07A5F]",
-            textColor: "text-white",
-            iconBg: "bg-[#2C1810]",
-            hasPhone: true
+            rotate: "rotate-2",
+            hasPhone: true,
+            img: "https://images.unsplash.com/photo-1559339352-11d035aa65de?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
         }
     ];
 
     return (
-        <section id="locations" className="py-24 bg-[#3D405B] text-[#F4F1DE] relative overflow-hidden">
-            <div className="absolute inset-0 opacity-5" style={{ backgroundImage: 'radial-gradient(#fff 1px, transparent 1px)', backgroundSize: '30px 30px' }}></div>
+        <section id="locations" className="py-32 bg-[#3D405B] relative overflow-hidden">
+            {/* Map Background Pattern */}
+            <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'url("https://www.transparenttextures.com/patterns/shattered-island.png")' }}></div>
 
             <div className="container mx-auto px-6 relative z-10">
-                <div className="flex flex-col md:flex-row justify-between items-center mb-16">
-                    <div className="text-center md:text-left">
-                        <h2 className="text-5xl md:text-6xl mb-4 font-abril">Visit Us <br /> Today</h2>
+                <div className="flex flex-col lg:flex-row items-center justify-between mb-20">
+                    <div className="text-center lg:text-left">
+                        <h2 className="text-6xl md:text-8xl text-white font-abril mb-4">Find Us</h2>
+                        <p className="text-xl text-white/70 max-w-md">Come say hello at one of our cozy locations.</p>
                     </div>
-                    <p className="text-lg opacity-70 max-w-xs mt-6 md:mt-0 text-center md:text-right font-light border-l-2 border-[#E07A5F] pl-6">Three convenient locations serving fresh pastries daily. Come taste the difference.</p>
+                    <div className="hidden lg:block">
+                        <Navigation className="w-24 h-24 text-[#E07A5F] opacity-50 animate-bounce" />
+                    </div>
                 </div>
 
-                <div className="grid md:grid-cols-3 gap-8">
+                <div className="grid md:grid-cols-2 gap-12 lg:gap-24 max-w-5xl mx-auto">
                     {locations.map((location, i) => (
-                        <div key={i} className={`${location.bgColor} ${location.textColor} p-8 rounded-[2rem] hover:transform hover:-translate-y-2 transition-all duration-300 group ${location.bgColor === 'bg-[#E07A5F]' ? 'shadow-2xl relative overflow-hidden' : ''}`}>
-                            {location.bgColor === 'bg-[#E07A5F]' && (
-                                <div className="absolute -right-10 -top-10 w-40 h-40 bg-white/10 rounded-full blur-2xl"></div>
-                            )}
-                            <div className="flex justify-between items-start mb-8 relative z-10">
-                                <div className={`w-14 h-14 ${location.iconBg} rounded-full flex items-center justify-center text-white shadow-lg group-hover:scale-110 transition-transform`}>
+                        <div key={i} className={`group relative bg-white p-4 pb-8 shadow-2xl transform transition-all duration-500 hover:scale-105 hover:rotate-0 hover:z-20 ${location.rotate}`}>
+                            {/* Tape Effect */}
+                            <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-32 h-8 bg-white/30 backdrop-blur-sm transform -rotate-1 shadow-sm z-10"></div>
+
+                            {/* Image Area */}
+                            <div className="h-64 w-full bg-gray-200 mb-6 overflow-hidden relative grayscale group-hover:grayscale-0 transition-all duration-500">
+                                <img src={location.img} className="w-full h-full object-cover" alt={location.title} />
+                                <div className="absolute top-4 right-4 w-12 h-12 bg-[#E07A5F] rounded-full flex items-center justify-center text-white shadow-lg">
                                     <location.icon className="w-6 h-6" />
                                 </div>
-                                <span className="text-6xl font-abril opacity-10 font-bold">{location.number}</span>
                             </div>
-                            <h3 className="text-2xl font-bold mb-2 relative z-10">{location.title}</h3>
-                            <p className={`${location.bgColor === 'bg-[#E07A5F]' ? 'opacity-90' : 'opacity-60'} text-sm uppercase tracking-wider mb-6 font-bold relative z-10`}>{location.subtitle}</p>
-                            <div className={`space-y-3 text-base font-medium border-t ${location.bgColor === 'bg-[#E07A5F]' ? 'border-white/20' : 'border-[#2C1810]/10'} pt-6 relative z-10`}>
-                                {location.address.map((line, j) => (
-                                    <p key={j}>{line}</p>
-                                ))}
+
+                            {/* Content */}
+                            <div className="px-4 text-center">
+                                <h3 className="text-3xl font-abril text-[#2C1810] mb-1">{location.title}</h3>
+                                <p className="text-[#E07A5F] font-bold text-sm uppercase tracking-widest mb-6">{location.subtitle}</p>
+
+                                <div className="space-y-2 text-gray-600 font-medium font-handwriting text-lg">
+                                    {location.address.map((line, j) => (
+                                        <p key={j}>{line}</p>
+                                    ))}
+                                </div>
+
                                 {location.hasPhone && (
-                                    <p className="mt-4 pt-2 text-sm italic flex items-center gap-2">
-                                        <Phone className="w-4 h-4" /> Reservations Recommended
-                                    </p>
+                                    <div className="mt-6 pt-4 border-t border-dashed border-gray-300 inline-block">
+                                        <p className="text-sm flex items-center gap-2 text-[#2C1810]">
+                                            <Phone className="w-4 h-4" /> Reservations: +65 1234 5678
+                                        </p>
+                                    </div>
                                 )}
                             </div>
                         </div>

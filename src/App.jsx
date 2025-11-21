@@ -2,14 +2,13 @@ import React, { useState, useEffect } from 'react';
 import Navigation from './components/Navigation';
 import MobileMenu from './components/MobileMenu';
 import Hero from './components/Hero';
-import MarqueeDivider from './components/MarqueeDivider';
-import SupremeSection from './components/SupremeSection';
-import CategorySection from './components/CategorySection';
+import BestsellersSection from './components/BestsellersSection';
 import CateringSection from './components/CateringSection';
-import MenuSection from './components/MenuSection';
+import CategorySection from './components/CategorySection';
 import QualitySection from './components/QualitySection';
 import LocationsSection from './components/LocationsSection';
 import TestimonialsSection from './components/TestimonialsSection';
+import CTASection from './components/CTASection';
 import Footer from './components/Footer';
 import BackToTop from './components/BackToTop';
 
@@ -54,14 +53,13 @@ const App = () => {
             <Navigation isScrolled={isScrolled} onMobileMenuToggle={toggleMobileMenu} />
             <MobileMenu isOpen={isMobileMenuOpen} onClose={toggleMobileMenu} />
             <Hero />
-            <MarqueeDivider />
-            <SupremeSection />
-            <CategorySection />
+            <BestsellersSection />
             <CateringSection />
-            <MenuSection />
+            <CategorySection />
             <QualitySection />
             <LocationsSection />
             <TestimonialsSection />
+            <CTASection />
             <Footer />
             <BackToTop show={showBackToTop} onClick={scrollToTop} />
         </div>
