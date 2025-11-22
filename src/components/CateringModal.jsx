@@ -30,14 +30,20 @@ const CateringModal = ({ isOpen, onClose }) => {
     if (!isOpen) return null;
 
     return (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm animate-fadeIn">
-            <div className="bg-[#F4F1DE] rounded-[2rem] max-w-2xl w-full shadow-2xl transform animate-scaleIn">
+        <div
+            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm animate-fadeIn"
+            onClick={onClose}
+        >
+            <div
+                className="bg-[#F4F1DE] rounded-[2rem] max-w-2xl w-full shadow-2xl transform animate-scaleIn"
+                onClick={(e) => e.stopPropagation()}
+            >
                 {/* Header */}
                 <div className="sticky top-0 bg-gradient-to-br from-[#2C1810] to-[#1a1410] text-[#F4F1DE] p-8 rounded-t-[2rem] relative overflow-hidden">
                     <div className="absolute top-0 right-0 w-64 h-64 bg-[#E07A5F]/20 rounded-full blur-3xl"></div>
                     <button
                         onClick={onClose}
-                        className="absolute top-6 right-6 p-2 hover:bg-white/10 rounded-full transition-colors z-10"
+                        className="absolute top-6 right-6 p-2 hover:bg-white/10 rounded-full transition-colors z-20"
                     >
                         <X className="w-6 h-6" />
                     </button>
@@ -69,7 +75,7 @@ const CateringModal = ({ isOpen, onClose }) => {
                                     value={formData.name}
                                     onChange={handleChange}
                                     required
-                                    className="w-full px-4 py-3 rounded-xl border-2 border-[#2C1810]/10 focus:border-[#E07A5F] outline-none transition-colors bg-white"
+                                    className="w-full px-4 py-3 rounded-xl border-2 border-[#2C1810]/10 focus:border-[#E07A5F] outline-none transition-colors bg-white text-gray-900"
                                     placeholder="John Doe"
                                 />
                             </div>
@@ -87,7 +93,7 @@ const CateringModal = ({ isOpen, onClose }) => {
                                         value={formData.email}
                                         onChange={handleChange}
                                         required
-                                        className="w-full px-4 py-3 rounded-xl border-2 border-[#2C1810]/10 focus:border-[#E07A5F] outline-none transition-colors bg-white"
+                                        className="w-full px-4 py-3 rounded-xl border-2 border-[#2C1810]/10 focus:border-[#E07A5F] outline-none transition-colors bg-white text-gray-900"
                                         placeholder="john@example.com"
                                     />
                                 </div>
@@ -102,7 +108,7 @@ const CateringModal = ({ isOpen, onClose }) => {
                                         value={formData.phone}
                                         onChange={handleChange}
                                         required
-                                        className="w-full px-4 py-3 rounded-xl border-2 border-[#2C1810]/10 focus:border-[#E07A5F] outline-none transition-colors bg-white"
+                                        className="w-full px-4 py-3 rounded-xl border-2 border-[#2C1810]/10 focus:border-[#E07A5F] outline-none transition-colors bg-white text-gray-900"
                                         placeholder="+65 1234 5678"
                                     />
                                 </div>
@@ -121,7 +127,7 @@ const CateringModal = ({ isOpen, onClose }) => {
                                         value={formData.eventDate}
                                         onChange={handleChange}
                                         required
-                                        className="w-full px-4 py-3 rounded-xl border-2 border-[#2C1810]/10 focus:border-[#E07A5F] outline-none transition-colors bg-white"
+                                        className="w-full px-4 py-3 rounded-xl border-2 border-[#2C1810]/10 focus:border-[#E07A5F] outline-none transition-colors bg-white text-gray-900"
                                     />
                                 </div>
                                 <div>
@@ -136,7 +142,7 @@ const CateringModal = ({ isOpen, onClose }) => {
                                         onChange={handleChange}
                                         required
                                         min="1"
-                                        className="w-full px-4 py-3 rounded-xl border-2 border-[#2C1810]/10 focus:border-[#E07A5F] outline-none transition-colors bg-white"
+                                        className="w-full px-4 py-3 rounded-xl border-2 border-[#2C1810]/10 focus:border-[#E07A5F] outline-none transition-colors bg-white text-gray-900"
                                         placeholder="50"
                                     />
                                 </div>
@@ -153,7 +159,7 @@ const CateringModal = ({ isOpen, onClose }) => {
                                     value={formData.message}
                                     onChange={handleChange}
                                     rows="4"
-                                    className="w-full px-4 py-3 rounded-xl border-2 border-[#2C1810]/10 focus:border-[#E07A5F] outline-none transition-colors resize-none bg-white"
+                                    className="w-full px-4 py-3 rounded-xl border-2 border-[#2C1810]/10 focus:border-[#E07A5F] outline-none transition-colors resize-none bg-white text-gray-900"
                                     placeholder="Tell us about your event, dietary requirements, preferences..."
                                 ></textarea>
                             </div>
