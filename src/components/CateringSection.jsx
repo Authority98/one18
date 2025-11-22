@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ArrowRight, Star, Check, Play } from 'lucide-react';
 import SectionTag from './SectionTag';
+import CateringModal from './CateringModal';
+import MenuDownloadModal from './MenuDownloadModal';
 
 const CateringSection = () => {
+    const [isCateringModalOpen, setIsCateringModalOpen] = useState(false);
+    const [isMenuModalOpen, setIsMenuModalOpen] = useState(false);
     return (
-        <section className="py-32 bg-gradient-to-br from-[#1a1410] via-[#2a1e19] to-[#1a1410] text-[#F4F1DE] relative overflow-hidden">
+        <section id="catering" className="py-32 bg-gradient-to-br from-[#1a1410] via-[#2a1e19] to-[#1a1410] text-[#F4F1DE] relative overflow-hidden">
             {/* Background Creative Elements */}
             <div className="absolute inset-0 pointer-events-none">
                 {/* Soft glows only - no lines */}
@@ -45,10 +49,16 @@ const CateringSection = () => {
                         </ul>
 
                         <div className="pt-6 flex flex-wrap gap-4">
-                            <a href="https://one18bakerynorthbridge.oddle.me/en_SG" target="_blank" rel="noreferrer" className="group inline-flex items-center justify-center gap-3 bg-[#E07A5F] text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-white hover:text-[#2C1810] transition-all shadow-lg hover:shadow-[#E07A5F]/50">
+                            <button
+                                onClick={() => setIsCateringModalOpen(true)}
+                                className="group inline-flex items-center justify-center gap-3 bg-[#E07A5F] text-white px-8 py-4 rounded-full text-lg font-bold hover:bg-white hover:text-[#2C1810] transition-all shadow-lg hover:shadow-[#E07A5F]/50"
+                            >
                                 Get a Quote <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-                            </a>
-                            <button className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full text-lg font-bold border border-[#F4F1DE]/30 hover:bg-[#F4F1DE]/10 transition-all">
+                            </button>
+                            <button
+                                onClick={() => setIsMenuModalOpen(true)}
+                                className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-full text-lg font-bold border border-[#F4F1DE]/30 hover:bg-[#F4F1DE]/10 transition-all"
+                            >
                                 Download Menu
                             </button>
                         </div>
@@ -147,6 +157,10 @@ const CateringSection = () => {
                     </div>
                 </div>
             </div>
+
+            {/* Modals */}
+            <CateringModal isOpen={isCateringModalOpen} onClose={() => setIsCateringModalOpen(false)} />
+            <MenuDownloadModal isOpen={isMenuModalOpen} onClose={() => setIsMenuModalOpen(false)} />
         </section>
     );
 };

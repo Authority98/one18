@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Star, Quote } from 'lucide-react';
 import SectionTag from './SectionTag';
+import ReviewModal from './ReviewModal';
 
 const TestimonialsSection = () => {
+    const [isReviewModalOpen, setIsReviewModalOpen] = useState(false);
     const testimonials = [
         {
             name: "Sarah L.",
@@ -31,7 +33,7 @@ const TestimonialsSection = () => {
     ];
 
     return (
-        <section className="py-32 bg-[#F9F7F2] relative overflow-hidden">
+        <section id="testimonials" className="py-32 bg-[#F9F7F2] relative overflow-hidden">
             {/* Creative Background */}
             <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
                 <div className="absolute top-[-10%] right-[-5%] w-[600px] h-[600px] bg-[#E07A5F]/5 rounded-full blur-3xl"></div>
@@ -94,7 +96,10 @@ const TestimonialsSection = () => {
                                 </div>
                                 <h3 className="text-3xl font-abril mb-4">Join the Family</h3>
                                 <p className="text-[#F4F1DE]/70 mb-8 max-w-xs">Share your experience and get featured on our wall of love.</p>
-                                <button className="bg-[#F4F1DE] text-[#2C1810] px-8 py-3 rounded-full font-bold hover:bg-white transition-colors">
+                                <button
+                                    onClick={() => setIsReviewModalOpen(true)}
+                                    className="bg-[#F4F1DE] text-[#2C1810] px-8 py-3 rounded-full font-bold hover:bg-white transition-colors"
+                                >
                                     Leave a Review
                                 </button>
                             </div>
@@ -102,6 +107,9 @@ const TestimonialsSection = () => {
                     </div>
                 </div>
             </div>
+
+            {/* Review Modal */}
+            <ReviewModal isOpen={isReviewModalOpen} onClose={() => setIsReviewModalOpen(false)} />
         </section>
     );
 };

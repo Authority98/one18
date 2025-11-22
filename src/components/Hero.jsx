@@ -7,7 +7,7 @@ const Hero = () => {
     const [isVideoOpen, setIsVideoOpen] = useState(false);
 
     return (
-        <header className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 pb-12 bg-texture">
+        <header id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 pb-12 bg-texture">
             {/* Decorative Blobs */}
             <div className="absolute top-20 left-[-100px] w-64 h-64 bg-[#F2CC8F] rounded-full mix-blend-multiply filter blur-xl opacity-60 animate-pulse pointer-events-none"></div>
             <div className="absolute top-40 right-[-100px] w-72 h-72 bg-[#E07A5F] rounded-full mix-blend-multiply filter blur-xl opacity-60 animate-pulse delay-1000 pointer-events-none"></div>
@@ -30,7 +30,7 @@ const Hero = () => {
                         </span> — from luxury in the oven to perfection on your plate. Handcrafted with premium French butter and filled with extraordinary flavors.
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                        <a href="#menu" className="group relative px-8 py-4 bg-[#2C1810] text-[#F4F1DE] font-bold rounded-full overflow-hidden shadow-lg">
+                        <a href="#bestsellers" className="group relative px-8 py-4 bg-[#2C1810] text-[#F4F1DE] font-bold rounded-full overflow-hidden shadow-lg">
                             <span className="relative z-10 group-hover:text-[#2C1810] transition-colors duration-300">Explore Menu</span>
                             <div className="absolute inset-0 h-full w-full scale-0 rounded-full transition-all duration-300 group-hover:scale-100 group-hover:bg-[#E07A5F]"></div>
                         </a>

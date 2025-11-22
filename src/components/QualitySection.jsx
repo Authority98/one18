@@ -39,7 +39,7 @@ const QualitySection = () => {
     ];
 
     return (
-        <section className="py-24 bg-[#F9F7F2] relative overflow-hidden">
+        <section id="quality" className="py-24 bg-[#F9F7F2] relative overflow-hidden">
             {/* Decorative Background Elements */}
             <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
                 <div className="absolute top-20 left-10 w-64 h-64 bg-[#E07A5F]/5 rounded-full blur-3xl" />
