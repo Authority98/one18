@@ -13,31 +13,31 @@ const Hero = () => {
             <div className="absolute top-40 right-[-100px] w-72 h-72 bg-[#E07A5F] rounded-full mix-blend-multiply filter blur-xl opacity-60 animate-pulse delay-1000 pointer-events-none"></div>
 
             <div className="container mx-auto px-6 grid lg:grid-cols-2 gap-0 lg:gap-12 items-center relative z-10">
-                <div className="text-center lg:text-left order-2 lg:order-1">
+                {/* Mobile Header - Visible only on mobile, appears first */}
+                <div className="lg:hidden text-center mb-0">
                     <SectionTag rotate="-rotate-2">
                         SINGAPORE'S FINEST • MUSLIM OWNED
                     </SectionTag>
-                    <h1 className="text-4xl md:text-7xl lg:text-8xl leading-[0.9] mb-6 text-[#2C1810] font-abril">
+                    <h1 className="text-4xl md:text-7xl leading-[0.9] mb-0 text-[#2C1810] font-abril">
                         Singapore's <br />
                         <span className="text-stroke">Finest Artisan Bakery</span>
                     </h1>
+                </div>
+
+                <div className="text-center lg:text-left order-2 lg:order-1">
+                    {/* Desktop Header - Hidden on mobile */}
+                    <div className="hidden lg:block">
+                        <SectionTag rotate="-rotate-2">
+                            SINGAPORE'S FINEST • MUSLIM OWNED
+                        </SectionTag>
+                        <h1 className="text-4xl md:text-7xl lg:text-8xl leading-[0.9] mb-6 text-[#2C1810] font-abril">
+                            Singapore's <br />
+                            <span className="text-stroke">Finest Artisan Bakery</span>
+                        </h1>
+                    </div>
                     <div className="mb-10 relative">
                         <div className="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-[#E07A5F] to-transparent opacity-50 rounded-full"></div>
                         <div className="pl-6">
-                            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 mb-8">
-                                <div className="group flex items-center gap-3 px-5 py-2.5 bg-[#F4F1DE]/50 backdrop-blur-sm border border-[#2C1810]/10 rounded-full shadow-sm hover:shadow-md hover:bg-[#F4F1DE] transition-all duration-300 cursor-default">
-                                    <div className="p-1.5 bg-[#2C1810] rounded-full text-[#F4F1DE] group-hover:scale-110 transition-transform duration-300">
-                                        <Award size={14} strokeWidth={2.5} />
-                                    </div>
-                                    <span className="text-xs font-bold tracking-[0.15em] text-[#2C1810] uppercase">Handcrafted Daily</span>
-                                </div>
-                                <div className="group flex items-center gap-3 px-5 py-2.5 bg-[#F4F1DE]/50 backdrop-blur-sm border border-[#2C1810]/10 rounded-full shadow-sm hover:shadow-md hover:bg-[#F4F1DE] transition-all duration-300 cursor-default">
-                                    <div className="p-1.5 bg-[#2C1810] rounded-full text-[#F4F1DE] group-hover:scale-110 transition-transform duration-300">
-                                        <Star size={14} strokeWidth={2.5} />
-                                    </div>
-                                    <span className="text-xs font-bold tracking-[0.15em] text-[#2C1810] uppercase">Premium Ingredients</span>
-                                </div>
-                            </div>
                             <p className="text-lg md:text-xl text-gray-600 font-light leading-relaxed">
                                 Where <span className="font-serif italic text-[#2C1810] font-medium">European mastery</span> meets <span className="font-serif italic text-[#2C1810] font-medium">Asian flavors</span>.
                                 <br />
@@ -57,7 +57,7 @@ const Hero = () => {
                 </div>
 
                 {/* Hero Image Composition */}
-                <div className="relative h-[400px] lg:h-[600px] w-full flex items-center justify-center order-1 lg:order-2 mb-44 lg:mb-0">
+                <div className="relative h-[400px] lg:h-[600px] w-full flex items-center justify-center order-1 lg:order-2 mb-44 lg:mb-0 -mt-12 lg:mt-0">
                     {/* Rotating Text Ring */}
                     <div className="absolute w-[280px] h-[280px] sm:w-[350px] sm:h-[350px] lg:w-[500px] lg:h-[500px] border border-[#2C1810]/10 rounded-full flex items-center justify-center animate-spin-slow pointer-events-none">
                         <svg viewBox="0 0 100 100" width="100%" height="100%">
