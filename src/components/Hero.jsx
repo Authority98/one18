@@ -83,13 +83,26 @@ const Hero = () => {
                         </div>
                     </div>
 
-                    {/* Floating Review Card */}
-                    <div className="absolute bottom-10 left-0 lg:left-10 bg-white p-5 rounded-2xl shadow-xl transform -rotate-3 animate-float-delay z-30 max-w-[200px]">
-                        <div className="flex items-center gap-1 text-amber-500 mb-2">
-                            {[...Array(5)].map((_, i) => <Star key={i} className="w-3 h-3 fill-current" />)}
+                    {/* Statistics Grid */}
+                    <div className="absolute bottom-10 left-0 lg:left-10 bg-white p-6 rounded-2xl shadow-xl transform -rotate-3 animate-float-delay z-30 max-w-[280px]">
+                        <div className="grid grid-cols-2 gap-4">
+                            <div className="text-center">
+                                <p className="text-2xl font-bold text-[#E07A5F]">50K+</p>
+                                <p className="text-xs text-[#2C1810] font-medium">Happy Customers</p>
+                            </div>
+                            <div className="text-center">
+                                <p className="text-2xl font-bold text-[#E07A5F]">100+</p>
+                                <p className="text-xs text-[#2C1810] font-medium">Daily Fresh Items</p>
+                            </div>
+                            <div className="text-center">
+                                <p className="text-2xl font-bold text-[#E07A5F]">4.9★</p>
+                                <p className="text-xs text-[#2C1810] font-medium">Google Rating</p>
+                            </div>
+                            <div className="text-center">
+                                <p className="text-2xl font-bold text-[#E07A5F]">2</p>
+                                <p className="text-xs text-[#2C1810] font-medium">Prime Locations</p>
+                            </div>
                         </div>
-                        <p className="text-sm font-bold text-[#2C1810] leading-tight">"The Pistachio Supreme is gorgeous!"</p>
-                        <p className="text-xs text-gray-500 mt-2 font-medium">— Eatbook.sg</p>
                     </div>
                 </div>
             </div>

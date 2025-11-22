@@ -31,7 +31,7 @@ const CateringModal = ({ isOpen, onClose }) => {
 
     return (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm animate-fadeIn">
-            <div className="bg-[#F4F1DE] rounded-[2rem] max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl transform animate-scaleIn">
+            <div className="bg-[#F4F1DE] rounded-[2rem] max-w-2xl w-full shadow-2xl transform animate-scaleIn">
                 {/* Header */}
                 <div className="sticky top-0 bg-gradient-to-br from-[#2C1810] to-[#1a1410] text-[#F4F1DE] p-8 rounded-t-[2rem] relative overflow-hidden">
                     <div className="absolute top-0 right-0 w-64 h-64 bg-[#E07A5F]/20 rounded-full blur-3xl"></div>
