@@ -29,7 +29,7 @@ const BestsellersSection = () => {
 
                 <div className="columns-1 md:columns-2 lg:columns-3 gap-8 space-y-8">
                     {collectionData.map((item, i) => (
-                        <div key={i} className={`group relative break-inside-avoid rounded-[2rem] overflow-hidden cursor-pointer shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 ${item.height} animate-fade-in-up`}>
+                        <div key={i} style={{ WebkitMaskImage: '-webkit-radial-gradient(white, black)' }} className={`group relative break-inside-avoid rounded-[2rem] overflow-hidden cursor-pointer shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-2 ${item.height} animate-fade-in-up transform-gpu isolation-isolate`}>
                             <img
                                 src={item.img}
                                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"

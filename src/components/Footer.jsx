@@ -60,7 +60,7 @@ const Footer = () => {
             {/* Main Footer Content */}
             <div className="container mx-auto px-6 pt-32 pb-12 relative z-10">
                 {/* Top Section - Brand & Newsletter */}
-                <div className="grid lg:grid-cols-2 gap-16 mb-12 pb-12 border-b border-white/5">
+                <div className="grid lg:grid-cols-2 gap-16 mb-0 pb-12 border-b border-white/5">
                     {/* Left - Brand */}
                     <div className="space-y-8">
                         <div>
@@ -128,7 +128,7 @@ const Footer = () => {
                 </div>
 
                 {/* Copyright & Back to Top */}
-                <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
+                <div className="pt-8 flex flex-col md:flex-row justify-between items-center gap-6">
                     <p className="text-sm text-[#F4F1DE]/40">
                         © 2025 One18 Bakery. Crafted with <span className="text-[#E07A5F]">❤</span> in Singapore
                     </p>

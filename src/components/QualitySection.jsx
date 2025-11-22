@@ -70,9 +70,6 @@ const QualitySection = () => {
                         </SectionTag>
                         <h2 className="text-6xl md:text-7xl text-[#2C1810] font-abril relative inline-block">
                             The One18 Difference
-                            <svg className="absolute -bottom-4 left-0 w-full h-3 text-[#E07A5F]" viewBox="0 0 100 10" preserveAspectRatio="none">
-                                <path d="M0 5 Q 50 10 100 5" stroke="currentColor" strokeWidth="2" fill="none" />
-                            </svg>
                         </h2>
                     </div>
                 </div>

@@ -120,7 +120,7 @@ const CateringSection = () => {
                         </div>
 
                         {/* Floating Stats Card */}
-                        <div className="absolute top-20 right-10 bg-[#F4F1DE] text-[#2C1810] p-6 rounded-3xl shadow-xl z-30 animate-float max-w-[180px]">
+                        <div className="absolute top-32 right-10 bg-[#F4F1DE] text-[#2C1810] p-6 rounded-3xl shadow-xl z-30 animate-float max-w-[180px]">
                             <div className="flex items-center gap-2 mb-2">
                                 <div className="flex -space-x-2">
                                     {[1, 2, 3].map(i => (

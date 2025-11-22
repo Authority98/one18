@@ -1,10 +1,21 @@
-import React, { useState } from 'react';
-import { Star, Quote } from 'lucide-react';
+import React, { useState, useRef } from 'react';
+import { Star, Quote, ChevronLeft, ChevronRight } from 'lucide-react';
 import SectionTag from './SectionTag';
 import ReviewModal from './ReviewModal';
 
 const TestimonialsSection = () => {
+    const scrollContainerRef = useRef(null);
     const [isReviewModalOpen, setIsReviewModalOpen] = useState(false);
+
+    const scroll = (direction) => {
+        if (scrollContainerRef.current) {
+            const scrollAmount = 400;
+            scrollContainerRef.current.scrollBy({
+                left: direction === 'left' ? -scrollAmount : scrollAmount,
+                behavior: 'smooth'
+            });
+        }
+    };
     const testimonials = [
         {
             name: "Sarah L.",
@@ -45,11 +56,11 @@ const TestimonialsSection = () => {
             </div>
 
             <div className="container mx-auto px-6 relative z-10">
-                <div className="text-center mb-20">
+                <div className="text-center mb-4 md:mb-8 relative">
                     <SectionTag>
                         COMMUNITY LOVE
                     </SectionTag>
-                    <h2 className="text-5xl md:text-7xl text-[#2C1810] font-abril leading-none">
+                    <h2 className="text-5xl md:text-7xl text-[#2C1810] font-abril leading-none mb-4 md:mb-8">
                         Loved By <br />
                         <span className="relative inline-block">
                             <span className="relative z-10">Thousands</span>
@@ -58,13 +69,31 @@ const TestimonialsSection = () => {
                             </svg>
                         </span>
                     </h2>
+
+                    {/* Navigation Buttons */}
+                    <div className="flex justify-center gap-4 mt-4 md:mt-6">
+                        <button
+                            onClick={() => scroll('left')}
+                            className="w-12 h-12 rounded-full border-2 border-[#2C1810] flex items-center justify-center hover:bg-[#2C1810] hover:text-[#F4F1DE] transition-all duration-300 group"
+                            aria-label="Scroll left"
+                        >
+                            <ChevronLeft className="w-6 h-6 group-hover:-translate-x-0.5 transition-transform" />
+                        </button>
+                        <button
+                            onClick={() => scroll('right')}
+                            className="w-12 h-12 rounded-full border-2 border-[#2C1810] flex items-center justify-center hover:bg-[#2C1810] hover:text-[#F4F1DE] transition-all duration-300 group"
+                            aria-label="Scroll right"
+                        >
+                            <ChevronRight className="w-6 h-6 group-hover:translate-x-0.5 transition-transform" />
+                        </button>
+                    </div>
                 </div>
 
                 <div className="relative">
                     {/* Horizontal Scroll Container */}
-                    <div className="flex overflow-x-auto pb-12 gap-8 snap-x snap-mandatory hide-scrollbar">
+                    <div ref={scrollContainerRef} className="flex overflow-x-auto py-12 px-4 gap-8 snap-x snap-mandatory hide-scrollbar">
                         {testimonials.map((t, i) => (
-                            <div key={i} className="min-w-[350px] md:min-w-[450px] snap-center">
+                            <div key={i} className="min-w-full md:min-w-[calc(50%-16px)] lg:min-w-[calc(33.333%-22px)] snap-center">
                                 <div className="bg-white p-10 rounded-[3rem] relative group hover:-translate-y-2 transition-transform duration-500 shadow-xl hover:shadow-2xl border border-[#2C1810]/5 h-full flex flex-col">
                                     <Quote className="w-12 h-12 text-[#E07A5F] mb-6 transform group-hover:scale-110 transition-transform" />
 
@@ -89,7 +118,7 @@ const TestimonialsSection = () => {
                         ))}
 
                         {/* Call to Action Card */}
-                        <div className="min-w-[350px] md:min-w-[450px] snap-center flex items-center justify-center">
+                        <div className="min-w-full md:min-w-[calc(50%-16px)] lg:min-w-[calc(33.333%-22px)] snap-center flex items-center justify-center">
                             <div className="bg-[#2C1810] p-10 rounded-[3rem] text-center text-[#F4F1DE] flex flex-col items-center justify-center h-full w-full shadow-xl transform hover:scale-[1.02] transition-transform cursor-pointer group">
                                 <div className="w-20 h-20 bg-[#E07A5F] rounded-full flex items-center justify-center mb-6 group-hover:rotate-12 transition-transform">
                                     <Star className="w-10 h-10 text-white fill-current" />
