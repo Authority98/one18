@@ -48,7 +48,7 @@ const App = () => {
     const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
 
     return (
-        <div className="font-dm-sans text-brand-dark bg-brand-cream min-h-screen overflow-x-hidden">
+        <div className="font-dm-sans text-brand-dark bg-brand-cream min-h-screen">
             <Navigation isScrolled={isScrolled} onMobileMenuToggle={toggleMobileMenu} />
             <MobileMenu isOpen={isMobileMenuOpen} onClose={toggleMobileMenu} />
             <Hero />

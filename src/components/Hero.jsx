@@ -24,15 +24,19 @@ const Hero = () => {
                     <div className="mb-10 relative">
                         <div className="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-[#E07A5F] to-transparent opacity-50 rounded-full"></div>
                         <div className="pl-6">
-                            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-x-6 gap-y-2 mb-4 text-sm font-medium tracking-widest text-[#E07A5F]">
-                                <span className="flex items-center gap-2">
-                                    <span className="w-1.5 h-1.5 rounded-full bg-[#2C1810]"></span>
-                                    HANDCRAFTED DAILY
-                                </span>
-                                <span className="flex items-center gap-2">
-                                    <span className="w-1.5 h-1.5 rounded-full bg-[#2C1810]"></span>
-                                    PREMIUM INGREDIENTS
-                                </span>
+                            <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 mb-8">
+                                <div className="group flex items-center gap-3 px-5 py-2.5 bg-[#F4F1DE]/50 backdrop-blur-sm border border-[#2C1810]/10 rounded-full shadow-sm hover:shadow-md hover:bg-[#F4F1DE] transition-all duration-300 cursor-default">
+                                    <div className="p-1.5 bg-[#2C1810] rounded-full text-[#F4F1DE] group-hover:scale-110 transition-transform duration-300">
+                                        <Award size={14} strokeWidth={2.5} />
+                                    </div>
+                                    <span className="text-xs font-bold tracking-[0.15em] text-[#2C1810] uppercase">Handcrafted Daily</span>
+                                </div>
+                                <div className="group flex items-center gap-3 px-5 py-2.5 bg-[#F4F1DE]/50 backdrop-blur-sm border border-[#2C1810]/10 rounded-full shadow-sm hover:shadow-md hover:bg-[#F4F1DE] transition-all duration-300 cursor-default">
+                                    <div className="p-1.5 bg-[#2C1810] rounded-full text-[#F4F1DE] group-hover:scale-110 transition-transform duration-300">
+                                        <Star size={14} strokeWidth={2.5} />
+                                    </div>
+                                    <span className="text-xs font-bold tracking-[0.15em] text-[#2C1810] uppercase">Premium Ingredients</span>
+                                </div>
                             </div>
                             <p className="text-lg md:text-xl text-gray-600 font-light leading-relaxed">
                                 Where <span className="font-serif italic text-[#2C1810] font-medium">European mastery</span> meets <span className="font-serif italic text-[#2C1810] font-medium">Asian flavors</span>.
