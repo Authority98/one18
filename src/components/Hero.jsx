@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Star, Play } from 'lucide-react';
+import { Star, Play, Users, ShoppingBag, MapPin, Award } from 'lucide-react';
 import VideoModal from './VideoModal';
 import SectionTag from './SectionTag';
 
@@ -21,14 +21,26 @@ const Hero = () => {
                         Singapore's <br />
                         <span className="text-stroke">Finest Artisan Bakery</span>
                     </h1>
-                    <p className="text-lg md:text-xl text-gray-700 mb-8 max-w-md mx-auto lg:mx-0 font-light leading-relaxed">
-                        Discover our world-famous <span className="font-bold text-[#E07A5F] relative inline-block">
-                            Supreme Circular Croissants
-                            <svg className="absolute w-full h-2 bottom-0 left-0 text-[#E07A5F]/30" viewBox="0 0 100 10" preserveAspectRatio="none">
-                                <path d="M0 5 Q 50 10 100 5" stroke="currentColor" strokeWidth="2" fill="none" />
-                            </svg>
-                        </span> — from luxury in the oven to perfection on your plate. Handcrafted with premium French butter and filled with extraordinary flavors.
-                    </p>
+                    <div className="mb-10 relative">
+                        <div className="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-[#E07A5F] to-transparent opacity-50 rounded-full"></div>
+                        <div className="pl-6">
+                            <div className="flex flex-wrap items-center gap-x-6 gap-y-2 mb-4 text-sm font-medium tracking-widest text-[#E07A5F]">
+                                <span className="flex items-center gap-2">
+                                    <span className="w-1.5 h-1.5 rounded-full bg-[#2C1810]"></span>
+                                    HANDCRAFTED DAILY
+                                </span>
+                                <span className="flex items-center gap-2">
+                                    <span className="w-1.5 h-1.5 rounded-full bg-[#2C1810]"></span>
+                                    PREMIUM INGREDIENTS
+                                </span>
+                            </div>
+                            <p className="text-lg md:text-xl text-gray-600 font-light leading-relaxed">
+                                Where <span className="font-serif italic text-[#2C1810] font-medium">European mastery</span> meets <span className="font-serif italic text-[#2C1810] font-medium">Asian flavors</span>.
+                                <br />
+                                Every pastry is a work of art, baked fresh throughout the day using only the finest imported ingredients.
+                            </p>
+                        </div>
+                    </div>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                         <a href="#bestsellers" className="group relative px-8 py-4 bg-[#2C1810] text-[#F4F1DE] font-bold rounded-full overflow-hidden shadow-lg">
                             <span className="relative z-10 group-hover:text-[#2C1810] transition-colors duration-300">Explore Menu</span>
@@ -84,23 +96,39 @@ const Hero = () => {
                     </div>
 
                     {/* Statistics Grid */}
-                    <div className="absolute bottom-10 left-0 lg:left-10 bg-white p-6 rounded-2xl shadow-xl transform -rotate-3 animate-float-delay z-30 max-w-[280px]">
-                        <div className="grid grid-cols-2 gap-4">
-                            <div className="text-center">
-                                <p className="text-2xl font-bold text-[#E07A5F]">50K+</p>
-                                <p className="text-xs text-[#2C1810] font-medium">Happy Customers</p>
+                    {/* Statistics - Floating Glass Pill */}
+                    <div className="absolute -bottom-12 lg:-bottom-8 left-1/2 lg:left-auto lg:right-1/2 transform -translate-x-1/2 lg:translate-x-1/2 z-40 w-full max-w-[90%] lg:max-w-none">
+                        <div className="bg-white/60 backdrop-blur-xl border border-white/80 p-4 rounded-2xl shadow-2xl flex flex-row justify-between lg:justify-center gap-4 lg:gap-12 animate-float">
+                            <div className="flex flex-col items-center justify-center text-center group">
+                                <div className="bg-[#E07A5F]/10 p-2 rounded-full mb-1 group-hover:scale-110 transition-transform">
+                                    <Users size={18} className="text-[#E07A5F]" />
+                                </div>
+                                <p className="text-lg font-bold text-[#2C1810] leading-none">50K+</p>
+                                <p className="text-[10px] uppercase tracking-wider text-gray-500 font-medium mt-1">Happy Customers</p>
                             </div>
-                            <div className="text-center">
-                                <p className="text-2xl font-bold text-[#E07A5F]">100+</p>
-                                <p className="text-xs text-[#2C1810] font-medium">Daily Fresh Items</p>
+                            <div className="w-px h-10 bg-[#2C1810]/10 self-center"></div>
+                            <div className="flex flex-col items-center justify-center text-center group">
+                                <div className="bg-[#E07A5F]/10 p-2 rounded-full mb-1 group-hover:scale-110 transition-transform">
+                                    <ShoppingBag size={18} className="text-[#E07A5F]" />
+                                </div>
+                                <p className="text-lg font-bold text-[#2C1810] leading-none">100+</p>
+                                <p className="text-[10px] uppercase tracking-wider text-gray-500 font-medium mt-1">Daily Items</p>
                             </div>
-                            <div className="text-center">
-                                <p className="text-2xl font-bold text-[#E07A5F]">4.9★</p>
-                                <p className="text-xs text-[#2C1810] font-medium">Google Rating</p>
+                            <div className="w-px h-10 bg-[#2C1810]/10 self-center hidden sm:block"></div>
+                            <div className="flex flex-col items-center justify-center text-center group hidden sm:flex">
+                                <div className="bg-[#E07A5F]/10 p-2 rounded-full mb-1 group-hover:scale-110 transition-transform">
+                                    <Star size={18} className="text-[#E07A5F]" fill="#E07A5F" />
+                                </div>
+                                <p className="text-lg font-bold text-[#2C1810] leading-none">4.9★</p>
+                                <p className="text-[10px] uppercase tracking-wider text-gray-500 font-medium mt-1">Google Rating</p>
                             </div>
-                            <div className="text-center">
-                                <p className="text-2xl font-bold text-[#E07A5F]">2</p>
-                                <p className="text-xs text-[#2C1810] font-medium">Prime Locations</p>
+                            <div className="w-px h-10 bg-[#2C1810]/10 self-center hidden sm:block"></div>
+                            <div className="flex flex-col items-center justify-center text-center group hidden sm:flex">
+                                <div className="bg-[#E07A5F]/10 p-2 rounded-full mb-1 group-hover:scale-110 transition-transform">
+                                    <MapPin size={18} className="text-[#E07A5F]" />
+                                </div>
+                                <p className="text-lg font-bold text-[#2C1810] leading-none">2</p>
+                                <p className="text-[10px] uppercase tracking-wider text-gray-500 font-medium mt-1">Locations</p>
                             </div>
                         </div>
                     </div>
