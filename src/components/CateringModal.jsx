@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { X, Send, Calendar, Users, Mail, User, Phone, MessageSquare } from 'lucide-react';
 
 const CateringModal = ({ isOpen, onClose }) => {
@@ -27,6 +27,18 @@ const CateringModal = ({ isOpen, onClose }) => {
         }, 2000);
     };
 
+    // Prevent background scroll when modal is open
+    useEffect(() => {
+        if (isOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'unset';
+        }
+        return () => {
+            document.body.style.overflow = 'unset';
+        };
+    }, [isOpen]);
+
     if (!isOpen) return null;
 
     return (
@@ -35,7 +47,7 @@ const CateringModal = ({ isOpen, onClose }) => {
             onClick={onClose}
         >
             <div
-                className="bg-[#F4F1DE] rounded-[2rem] max-w-2xl w-full shadow-2xl transform animate-scaleIn"
+                className="bg-gradient-to-br from-[#2C1810] to-[#1a1410] rounded-[2rem] max-w-2xl w-full max-h-[90vh] overflow-y-auto hide-scrollbar shadow-2xl transform animate-scaleIn"
                 onClick={(e) => e.stopPropagation()}
             >
                 {/* Header */}
@@ -52,7 +64,7 @@ const CateringModal = ({ isOpen, onClose }) => {
                 </div>
 
                 {/* Form */}
-                <form onSubmit={handleSubmit} className="p-8 space-y-6">
+                <form onSubmit={handleSubmit} className="p-8 space-y-6 rounded-b-[2rem] bg-[#F4F1DE]">
                     {isSubmitted ? (
                         <div className="text-center py-12">
                             <div className="w-20 h-20 bg-[#E07A5F] rounded-full flex items-center justify-center mx-auto mb-6 animate-bounce">

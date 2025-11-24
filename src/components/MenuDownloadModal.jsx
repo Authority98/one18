@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { X, Download, FileText } from 'lucide-react';
 
 const MenuDownloadModal = ({ isOpen, onClose }) => {
@@ -27,6 +27,18 @@ const MenuDownloadModal = ({ isOpen, onClose }) => {
         // Simulate download - in production, this would trigger actual PDF download
         alert(`Downloading ${menuTitle}... (This is a demo)`);
     };
+
+    // Prevent background scroll when modal is open
+    useEffect(() => {
+        if (isOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'unset';
+        }
+        return () => {
+            document.body.style.overflow = 'unset';
+        };
+    }, [isOpen]);
 
     if (!isOpen) return null;
 

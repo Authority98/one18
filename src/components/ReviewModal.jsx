@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { X, Star, Send, User, MessageSquare } from 'lucide-react';
 
 const ReviewModal = ({ isOpen, onClose }) => {
@@ -28,6 +28,18 @@ const ReviewModal = ({ isOpen, onClose }) => {
             setFormData({ name: '', rating: 0, review: '' });
         }, 2000);
     };
+
+    // Prevent background scroll when modal is open
+    useEffect(() => {
+        if (isOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'unset';
+        }
+        return () => {
+            document.body.style.overflow = 'unset';
+        };
+    }, [isOpen]);
 
     if (!isOpen) return null;
 
@@ -98,8 +110,8 @@ const ReviewModal = ({ isOpen, onClose }) => {
                                         >
                                             <Star
                                                 className={`w-12 h-12 transition-colors ${star <= (hoveredRating || formData.rating)
-                                                        ? 'text-[#E07A5F] fill-[#E07A5F]'
-                                                        : 'text-[#2C1810]/20'
+                                                    ? 'text-[#E07A5F] fill-[#E07A5F]'
+                                                    : 'text-[#2C1810]/20'
                                                     }`}
                                             />
                                         </button>
