@@ -44,9 +44,9 @@ const MenuDownloadModal = ({ isOpen, onClose }) => {
 
     return (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm animate-fadeIn">
-            <div className="bg-[#F4F1DE] rounded-[2rem] max-w-2xl w-full max-h-[90vh] overflow-y-auto shadow-2xl transform animate-scaleIn">
+            <div className="bg-gradient-to-br from-[#2C1810] to-[#1a1410] rounded-[2rem] max-w-2xl w-full max-h-[90vh] overflow-y-auto hide-scrollbar shadow-2xl transform animate-scaleIn">
                 {/* Header */}
-                <div className="sticky top-0 bg-gradient-to-br from-[#2C1810] to-[#1a1410] text-[#F4F1DE] p-8 rounded-t-[2rem] relative overflow-hidden">
+                <div className="sticky top-0 bg-gradient-to-br from-[#2C1810] to-[#1a1410] text-[#F4F1DE] p-8 rounded-t-[2rem] relative overflow-hidden z-10">
                     <div className="absolute top-0 right-0 w-64 h-64 bg-[#E07A5F]/20 rounded-full blur-3xl"></div>
                     <button
                         onClick={onClose}
@@ -64,31 +64,24 @@ const MenuDownloadModal = ({ isOpen, onClose }) => {
                 </div>
 
                 {/* Menu Cards */}
-                <div className="p-8 space-y-4">
+                <div className="p-8 space-y-4 rounded-b-[2rem] bg-[#F4F1DE]">
                     {menus.map((menu, index) => (
                         <div
                             key={index}
-                            className="bg-white rounded-2xl p-6 border-2 border-[#2C1810]/5 hover:border-[#E07A5F]/50 transition-all hover:shadow-lg group"
+                            className="bg-white rounded-2xl p-6 border-2 border-[#2C1810]/5 hover:border-[#E07A5F]/50 transition-all hover:shadow-lg group text-center"
                         >
-                            <div className="flex items-start gap-4">
-                                <div className="w-16 h-16 bg-[#E07A5F]/10 rounded-xl flex items-center justify-center text-3xl flex-shrink-0 group-hover:scale-110 transition-transform">
-                                    {menu.icon}
-                                </div>
-                                <div className="flex-grow">
-                                    <h3 className="text-xl font-abril text-[#2C1810] mb-1">{menu.title}</h3>
-                                    <p className="text-[#2C1810]/60 text-sm mb-3">{menu.description}</p>
-                                    <div className="flex items-center justify-between">
-                                        <span className="text-xs text-[#2C1810]/40 font-medium">PDF • {menu.size}</span>
-                                        <button
-                                            onClick={() => handleDownload(menu.title)}
-                                            className="flex items-center gap-2 bg-[#E07A5F] text-white px-6 py-2 rounded-full font-bold text-sm hover:bg-[#2C1810] transition-colors shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
-                                        >
-                                            <Download className="w-4 h-4" />
-                                            Download
-                                        </button>
-                                    </div>
-                                </div>
+                            <div className="w-20 h-20 bg-[#E07A5F]/10 rounded-xl flex items-center justify-center text-4xl mx-auto mb-4 group-hover:scale-110 transition-transform">
+                                {menu.icon}
                             </div>
+                            <h3 className="text-xl font-abril text-[#2C1810] mb-2">{menu.title}</h3>
+                            <p className="text-[#2C1810]/60 text-sm mb-4">{menu.description}</p>
+                            <button
+                                onClick={() => handleDownload(menu.title)}
+                                className="w-full flex items-center justify-center gap-2 bg-[#E07A5F] text-white px-6 py-3 rounded-full font-bold text-sm hover:bg-[#2C1810] transition-colors shadow-md hover:shadow-lg transform hover:-translate-y-0.5"
+                            >
+                                <Download className="w-4 h-4" />
+                                Download
+                            </button>
                         </div>
                     ))}
 
