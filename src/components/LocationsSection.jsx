@@ -28,13 +28,13 @@ const LocationsSection = () => {
             <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'url("https://www.transparenttextures.com/patterns/shattered-island.png")' }}></div>
 
             <div className="container mx-auto px-6 relative z-10">
-                <div className="flex flex-col lg:flex-row items-center justify-between mb-20">
-                    <div className="text-center lg:text-left">
+                <div className="flex flex-col items-center justify-center mb-20 text-center">
+                    <div className="relative">
                         <h2 className="text-6xl md:text-8xl text-white font-abril mb-4">Find Us</h2>
-                        <p className="text-xl text-white/70 max-w-md">Come say hello at one of our cozy locations.</p>
-                    </div>
-                    <div className="hidden lg:block">
-                        <Navigation className="w-24 h-24 text-[#E07A5F] opacity-50 animate-bounce" />
+                        <p className="text-xl text-white/70 max-w-md mx-auto">Come say hello at one of our cozy locations.</p>
+                        <div className="hidden lg:block absolute -right-32 top-1/2 -translate-y-1/2">
+                            <Navigation className="w-24 h-24 text-[#E07A5F] opacity-50 animate-bounce" />
+                        </div>
                     </div>
                 </div>
 

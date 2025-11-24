@@ -50,9 +50,10 @@ const MenuDownloadModal = ({ isOpen, onClose }) => {
                     <div className="absolute top-0 right-0 w-64 h-64 bg-[#E07A5F]/20 rounded-full blur-3xl"></div>
                     <button
                         onClick={onClose}
-                        className="absolute top-6 right-6 p-2 hover:bg-white/10 rounded-full transition-colors z-20"
+                        className="absolute top-6 right-6 p-4 hover:bg-white/10 rounded-full transition-colors z-50 cursor-pointer group"
+                        aria-label="Close modal"
                     >
-                        <X className="w-6 h-6" />
+                        <X className="w-8 h-8 group-hover:scale-110 transition-transform" />
                     </button>
                     <div className="relative z-10">
                         <div className="w-16 h-16 bg-[#E07A5F]/20 backdrop-blur-md rounded-2xl flex items-center justify-center mb-4">
