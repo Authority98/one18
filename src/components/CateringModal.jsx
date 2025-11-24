@@ -51,7 +51,7 @@ const CateringModal = ({ isOpen, onClose }) => {
                 onClick={(e) => e.stopPropagation()}
             >
                 {/* Header */}
-                <div className="sticky top-0 bg-gradient-to-br from-[#2C1810] to-[#1a1410] text-[#F4F1DE] p-8 rounded-t-[2rem] relative overflow-hidden z-10">
+                <div className="sticky top-0 z-50 bg-gradient-to-br from-[#2C1810] to-[#1a1410] text-[#F4F1DE] p-8 rounded-t-[2rem] relative overflow-hidden">
                     <div className="absolute top-0 right-0 w-64 h-64 bg-[#E07A5F]/20 rounded-full blur-3xl"></div>
                     <button
                         onClick={onClose}

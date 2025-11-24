@@ -46,14 +46,13 @@ const MenuDownloadModal = ({ isOpen, onClose }) => {
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm animate-fadeIn">
             <div className="bg-gradient-to-br from-[#2C1810] to-[#1a1410] rounded-[2rem] max-w-2xl w-full max-h-[90vh] overflow-y-auto hide-scrollbar shadow-2xl transform animate-scaleIn">
                 {/* Header */}
-                <div className="sticky top-0 bg-gradient-to-br from-[#2C1810] to-[#1a1410] text-[#F4F1DE] p-8 rounded-t-[2rem] relative overflow-hidden z-10">
+                <div className="sticky top-0 z-50 bg-gradient-to-br from-[#2C1810] to-[#1a1410] text-[#F4F1DE] p-8 rounded-t-[2rem] relative overflow-hidden">
                     <div className="absolute top-0 right-0 w-64 h-64 bg-[#E07A5F]/20 rounded-full blur-3xl"></div>
                     <button
                         onClick={onClose}
-                        className="absolute top-6 right-6 p-4 hover:bg-white/10 rounded-full transition-colors z-50 cursor-pointer group"
-                        aria-label="Close modal"
+                        className="absolute top-6 right-6 p-2 hover:bg-white/10 rounded-full transition-colors z-20"
                     >
-                        <X className="w-8 h-8 group-hover:scale-110 transition-transform" />
+                        <X className="w-6 h-6" />
                     </button>
                     <div className="relative z-10">
                         <div className="w-16 h-16 bg-[#E07A5F]/20 backdrop-blur-md rounded-2xl flex items-center justify-center mb-4">
