@@ -20,7 +20,7 @@ const CateringSection = () => {
                 <div className="grid lg:grid-cols-12 gap-12 items-center">
 
                     {/* Text Content - Spans 5 columns */}
-                    <div className="lg:col-span-5 space-y-8">
+                    <div className="lg:col-span-5 space-y-4 lg:space-y-8">
                         <SectionTag rotate="-rotate-2">
                             PREMIUM SERVICE
                         </SectionTag>
