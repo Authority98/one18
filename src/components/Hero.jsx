@@ -9,8 +9,8 @@ const Hero = () => {
     return (
         <header id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 pb-28 md:pb-24 bg-texture">
             {/* Decorative Blobs */}
-            <div className="absolute top-20 left-[-100px] w-64 h-64 bg-[#F2CC8F] rounded-full mix-blend-multiply filter blur-xl opacity-60 animate-pulse pointer-events-none"></div>
-            <div className="absolute top-40 right-[-100px] w-72 h-72 bg-[#E07A5F] rounded-full mix-blend-multiply filter blur-xl opacity-60 animate-pulse delay-1000 pointer-events-none"></div>
+            <div className="absolute top-20 left-0 w-64 h-64 bg-[#F2CC8F] rounded-full mix-blend-multiply filter blur-xl opacity-60 animate-pulse pointer-events-none -translate-x-1/2"></div>
+            <div className="absolute top-40 right-0 w-72 h-72 bg-[#E07A5F] rounded-full mix-blend-multiply filter blur-xl opacity-60 animate-pulse delay-1000 pointer-events-none translate-x-1/2"></div>
 
             <div className="container mx-auto px-6 grid lg:grid-cols-2 gap-0 lg:gap-12 items-center relative z-10">
                 {/* Mobile Header - Visible only on mobile, appears first */}

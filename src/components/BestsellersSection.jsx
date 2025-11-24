@@ -7,8 +7,8 @@ const BestsellersSection = () => {
     return (
         <section id="bestsellers" className="py-32 bg-[#F9F7F2] relative overflow-hidden">
             {/* Decorative Elements */}
-            <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-[#E07A5F]/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3 pointer-events-none"></div>
-            <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-[#2C1810]/5 rounded-full blur-3xl translate-y-1/3 -translate-x-1/4 pointer-events-none"></div>
+            <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-[#E07A5F]/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
+            <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-[#2C1810]/5 rounded-full blur-3xl translate-y-1/3 -translate-x-1/2 pointer-events-none"></div>
 
             {/* Abstract Background Shape */}
             <svg className="absolute top-20 left-0 w-full h-full pointer-events-none opacity-10" viewBox="0 0 100 100" preserveAspectRatio="none">
