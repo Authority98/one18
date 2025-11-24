@@ -50,7 +50,7 @@ const MenuDownloadModal = ({ isOpen, onClose }) => {
                     <div className="absolute top-0 right-0 w-64 h-64 bg-[#E07A5F]/20 rounded-full blur-3xl"></div>
                     <button
                         onClick={onClose}
-                        className="absolute top-6 right-6 p-2 hover:bg-white/10 rounded-full transition-colors z-10"
+                        className=\"absolute top-6 right-6 p-2 hover:bg-white/10 rounded-full transition-colors z-20\"
                     >
                         <X className="w-6 h-6" />
                     </button>
@@ -109,3 +109,4 @@ const MenuDownloadModal = ({ isOpen, onClose }) => {
 };
 
 export default MenuDownloadModal;
+
