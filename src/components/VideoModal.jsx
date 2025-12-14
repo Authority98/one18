@@ -31,11 +31,11 @@ const VideoModal = ({ isOpen, onClose }) => {
 
             {/* Modal Content */}
             <div
-                className="relative w-full max-w-5xl aspect-video bg-gradient-to-br from-[#2C1810]/90 to-black/90 rounded-3xl shadow-2xl overflow-hidden border border-white/10 animate-scaleIn"
+                className="relative w-full max-w-5xl aspect-video bg-gradient-to-br from-brand-dark/90 to-black/90 rounded-3xl shadow-2xl overflow-hidden border border-white/10 animate-scaleIn"
                 onClick={(e) => e.stopPropagation()}
             >
                 {/* Decorative gradient overlay */}
-                <div className="absolute inset-0 bg-gradient-to-tr from-[#E07A5F]/10 via-transparent to-[#F2CC8F]/10 pointer-events-none"></div>
+                <div className="absolute inset-0 bg-gradient-to-tr from-brand-accent/10 via-transparent to-brand-gold/10 pointer-events-none"></div>
 
                 {/* Close Button */}
                 <button

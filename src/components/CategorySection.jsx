@@ -34,8 +34,8 @@ const CategorySection = () => {
             <div className="container mx-auto px-6">
                 <div className="flex flex-col md:flex-row justify-between items-end mb-16">
                     <div>
-                        <h2 className="text-6xl md:text-8xl text-[#2C1810] font-abril mb-4">Shop By <br /> Category</h2>
-                        <div className="h-2 w-32 bg-[#E07A5F] rounded-full"></div>
+                        <h2 className="text-6xl md:text-8xl text-brand-dark font-abril mb-4">Shop By <br /> Category</h2>
+                        <div className="h-2 w-32 bg-brand-accent rounded-full"></div>
                     </div>
                     <p className="text-xl text-gray-500 max-w-md text-right mt-6 md:mt-0">
                         Explore our wide range of artisanal bakes, from flaky croissants to decadent cakes.

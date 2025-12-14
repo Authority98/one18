@@ -23,7 +23,7 @@ const LocationsSection = () => {
     ];
 
     return (
-        <section id="locations" className="py-32 bg-[#3D405B] relative overflow-hidden">
+        <section id="locations" className="py-32 bg-brand-green relative overflow-hidden">
             {/* Map Background Pattern */}
             <div className="absolute inset-0 opacity-10" style={{ backgroundImage: 'url("https://www.transparenttextures.com/patterns/shattered-island.png")' }}></div>
 
@@ -34,7 +34,7 @@ const LocationsSection = () => {
                         <p className="text-xl text-white/70 max-w-md">Come say hello at one of our cozy locations.</p>
                     </div>
                     <div className="hidden lg:block">
-                        <Navigation className="w-24 h-24 text-[#E07A5F] opacity-50 animate-bounce" />
+                        <Navigation className="w-24 h-24 text-brand-accent opacity-50 animate-bounce" />
                     </div>
                 </div>
 
@@ -47,15 +47,15 @@ const LocationsSection = () => {
                             {/* Image Area */}
                             <div className="h-64 w-full bg-gray-200 mb-6 overflow-hidden relative grayscale group-hover:grayscale-0 transition-all duration-500">
                                 <img src={location.img} className="w-full h-full object-cover" alt={location.title} />
-                                <div className="absolute top-4 right-4 w-12 h-12 bg-[#E07A5F] rounded-full flex items-center justify-center text-white shadow-lg">
+                                <div className="absolute top-4 right-4 w-12 h-12 bg-brand-accent rounded-full flex items-center justify-center text-white shadow-lg">
                                     <location.icon className="w-6 h-6" />
                                 </div>
                             </div>
 
                             {/* Content */}
                             <div className="px-4 text-center">
-                                <h3 className="text-3xl font-abril text-[#2C1810] mb-1">{location.title}</h3>
-                                <p className="text-[#E07A5F] font-bold text-sm uppercase tracking-widest mb-6">{location.subtitle}</p>
+                                <h3 className="text-3xl font-abril text-brand-dark mb-1">{location.title}</h3>
+                                <p className="text-brand-accent font-bold text-sm uppercase tracking-widest mb-6">{location.subtitle}</p>
 
                                 <div className="space-y-2 text-gray-600 font-medium font-handwriting text-lg">
                                     {location.address.map((line, j) => (
@@ -65,7 +65,7 @@ const LocationsSection = () => {
 
                                 {location.hasPhone && (
                                     <div className="mt-6 pt-4 border-t border-dashed border-gray-300 inline-block">
-                                        <p className="text-sm flex items-center gap-2 text-[#2C1810]">
+                                        <p className="text-sm flex items-center gap-2 text-brand-dark">
                                             <Phone className="w-4 h-4" /> Reservations: +65 1234 5678
                                         </p>
                                     </div>

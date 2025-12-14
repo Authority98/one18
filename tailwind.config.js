@@ -7,11 +7,11 @@ export default {
     theme: {
         extend: {
             colors: {
-                'brand-dark': '#2C1810',
-                'brand-accent': '#E07A5F',
-                'brand-gold': '#F2CC8F',
-                'brand-cream': '#F4F1DE',
-                'brand-green': '#3D405B',
+                'brand-dark': '#1E3A8A', // Royal Blue
+                'brand-accent': '#F59E0B', // Vibrant Gold
+                'brand-gold': '#FFD54F', // Light Gold
+                'brand-cream': '#FFFFFF', // White
+                'brand-green': '#3949AB', // Indigo
             },
         },
     },

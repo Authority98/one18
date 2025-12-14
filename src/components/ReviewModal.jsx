@@ -45,9 +45,9 @@ const ReviewModal = ({ isOpen, onClose }) => {
 
     return (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm animate-fadeIn">
-            <div className="bg-[#F4F1DE] rounded-[2rem] max-w-lg w-full max-h-[90vh] overflow-y-auto shadow-2xl transform animate-scaleIn">
+            <div className="bg-brand-cream rounded-[2rem] max-w-lg w-full max-h-[90vh] overflow-y-auto shadow-2xl transform animate-scaleIn">
                 {/* Header */}
-                <div className="sticky top-0 z-50 bg-gradient-to-br from-[#E07A5F] to-[#2C1810] text-white p-8 rounded-t-[2rem] relative overflow-hidden">
+                <div className="sticky top-0 z-50 bg-gradient-to-br from-brand-accent to-brand-dark text-white p-8 rounded-t-[2rem] relative overflow-hidden">
                     <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl"></div>
                     <button
                         onClick={onClose}
@@ -68,18 +68,18 @@ const ReviewModal = ({ isOpen, onClose }) => {
                 <form onSubmit={handleSubmit} className="p-8 space-y-6">
                     {isSubmitted ? (
                         <div className="text-center py-12">
-                            <div className="w-20 h-20 bg-[#E07A5F] rounded-full flex items-center justify-center mx-auto mb-6 animate-bounce">
+                            <div className="w-20 h-20 bg-brand-accent rounded-full flex items-center justify-center mx-auto mb-6 animate-bounce">
                                 <Star className="w-10 h-10 text-white fill-white" />
                             </div>
-                            <h3 className="text-3xl font-abril text-[#2C1810] mb-3">Thank You!</h3>
-                            <p className="text-[#2C1810]/70">Your review means the world to us.</p>
+                            <h3 className="text-3xl font-abril text-brand-dark mb-3">Thank You!</h3>
+                            <p className="text-brand-dark/70">Your review means the world to us.</p>
                         </div>
                     ) : (
                         <>
                             {/* Name */}
                             <div>
-                                <label className="flex items-center gap-2 text-[#2C1810] font-bold mb-2">
-                                    <User className="w-4 h-4 text-[#E07A5F]" />
+                                <label className="flex items-center gap-2 text-brand-dark font-bold mb-2">
+                                    <User className="w-4 h-4 text-brand-accent" />
                                     Your Name *
                                 </label>
                                 <input
@@ -88,14 +88,14 @@ const ReviewModal = ({ isOpen, onClose }) => {
                                     value={formData.name}
                                     onChange={handleChange}
                                     required
-                                    className="w-full px-4 py-3 rounded-xl border-2 border-[#2C1810]/10 focus:border-[#E07A5F] outline-none transition-colors bg-white"
+                                    className="w-full px-4 py-3 rounded-xl border-2 border-brand-dark/10 focus:border-brand-accent outline-none transition-colors bg-white"
                                     placeholder="John Doe"
                                 />
                             </div>
 
                             {/* Star Rating */}
                             <div>
-                                <label className="text-[#2C1810] font-bold mb-3 block">
+                                <label className="text-brand-dark font-bold mb-3 block">
                                     Rate Your Experience *
                                 </label>
                                 <div className="flex gap-2 justify-center py-4">
@@ -110,15 +110,15 @@ const ReviewModal = ({ isOpen, onClose }) => {
                                         >
                                             <Star
                                                 className={`w-12 h-12 transition-colors ${star <= (hoveredRating || formData.rating)
-                                                    ? 'text-[#E07A5F] fill-[#E07A5F]'
-                                                    : 'text-[#2C1810]/20'
+                                                    ? 'text-brand-accent fill-brand-accent'
+                                                    : 'text-brand-dark/20'
                                                     }`}
                                             />
                                         </button>
                                     ))}
                                 </div>
                                 {formData.rating > 0 && (
-                                    <p className="text-center text-[#2C1810]/70 text-sm mt-2">
+                                    <p className="text-center text-brand-dark/70 text-sm mt-2">
                                         {formData.rating === 5 && "🎉 Outstanding!"}
                                         {formData.rating === 4 && "😊 Great!"}
                                         {formData.rating === 3 && "👍 Good!"}
@@ -130,8 +130,8 @@ const ReviewModal = ({ isOpen, onClose }) => {
 
                             {/* Review Text */}
                             <div>
-                                <label className="flex items-center gap-2 text-[#2C1810] font-bold mb-2">
-                                    <MessageSquare className="w-4 h-4 text-[#E07A5F]" />
+                                <label className="flex items-center gap-2 text-brand-dark font-bold mb-2">
+                                    <MessageSquare className="w-4 h-4 text-brand-accent" />
                                     Your Review *
                                 </label>
                                 <textarea
@@ -140,7 +140,7 @@ const ReviewModal = ({ isOpen, onClose }) => {
                                     onChange={handleChange}
                                     required
                                     rows="5"
-                                    className="w-full px-4 py-3 rounded-xl border-2 border-[#2C1810]/10 focus:border-[#E07A5F] outline-none transition-colors resize-none bg-white"
+                                    className="w-full px-4 py-3 rounded-xl border-2 border-brand-dark/10 focus:border-brand-accent outline-none transition-colors resize-none bg-white"
                                     placeholder="Tell us about your experience at One18..."
                                 ></textarea>
                             </div>
@@ -148,7 +148,7 @@ const ReviewModal = ({ isOpen, onClose }) => {
                             {/* Submit Button */}
                             <button
                                 type="submit"
-                                className="w-full bg-[#E07A5F] text-white py-4 rounded-full font-bold text-lg hover:bg-[#2C1810] transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 flex items-center justify-center gap-2"
+                                className="w-full bg-brand-accent text-white py-4 rounded-full font-bold text-lg hover:bg-brand-dark transition-colors shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 flex items-center justify-center gap-2"
                             >
                                 <Send className="w-5 h-5" />
                                 Submit Review

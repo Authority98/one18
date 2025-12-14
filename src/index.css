@@ -5,11 +5,11 @@
 @tailwind utilities;
 
 :root {
-  --brand-dark: #2C1810;
-  --brand-accent: #E07A5F;
-  --brand-gold: #F2CC8F;
-  --brand-cream: #F4F1DE;
-  --brand-green: #3D405B;
+  --brand-dark: #1E3A8A;
+  --brand-accent: #F59E0B;
+  --brand-gold: #FFD54F;
+  --brand-cream: #FFFFFF;
+  --brand-green: #3949AB;
 }
 
 * {
@@ -56,11 +56,11 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #F4F1DE;
+  background: #FFFFFF;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #E07A5F;
+  background: #F59E0B;
   border-radius: 5px;
 }
 
@@ -114,7 +114,7 @@ body {
 }
 
 .text-stroke {
-  -webkit-text-stroke: 1px #2C1810;
+  -webkit-text-stroke: 1px #1E3A8A;
   color: transparent;
 }
 

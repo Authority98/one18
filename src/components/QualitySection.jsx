@@ -8,7 +8,7 @@ const QualitySection = () => {
             icon: Sunrise,
             title: "4:00 AM Start",
             desc: "Our bakers start before dawn to ensure every pastry is fresh.",
-            color: "bg-[#F4F1DE] text-[#2C1810]",
+            color: "bg-brand-cream text-brand-dark",
             rotate: "-rotate-2",
             delay: "0"
         },
@@ -16,7 +16,7 @@ const QualitySection = () => {
             icon: Globe,
             title: "Premium Sourcing",
             desc: "We import butter from France and source local herbs daily.",
-            color: "bg-[#E07A5F] text-white",
+            color: "bg-brand-accent text-white",
             rotate: "rotate-2",
             delay: "100"
         },
@@ -24,7 +24,7 @@ const QualitySection = () => {
             icon: Scroll,
             title: "Artisan Craft",
             desc: "Hand-laminated dough with 27 layers of buttery perfection.",
-            color: "bg-[#2C1810] text-[#F4F1DE]",
+            color: "bg-brand-dark text-brand-cream",
             rotate: "-rotate-1",
             delay: "200"
         },
@@ -32,18 +32,18 @@ const QualitySection = () => {
             icon: Store,
             title: "Served Fresh",
             desc: "Straight from our ovens to your plate at our 3 locations.",
-            color: "bg-[#F4F1DE] text-[#2C1810]",
+            color: "bg-brand-cream text-brand-dark",
             rotate: "rotate-3",
             delay: "300"
         }
     ];
 
     return (
-        <section id="quality" className="py-24 bg-[#F9F7F2] relative overflow-hidden">
+        <section id="quality" className="py-24 bg-brand-cream relative overflow-hidden">
             {/* Decorative Background Elements */}
             <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-                <div className="absolute top-20 left-10 w-64 h-64 bg-[#E07A5F]/5 rounded-full blur-3xl" />
-                <div className="absolute bottom-20 right-10 w-96 h-96 bg-[#2C1810]/5 rounded-full blur-3xl" />
+                <div className="absolute top-20 left-10 w-64 h-64 bg-brand-accent/5 rounded-full blur-3xl" />
+                <div className="absolute bottom-20 right-10 w-96 h-96 bg-brand-dark/5 rounded-full blur-3xl" />
             </div>
 
             {/* Connecting Line for Desktop */}
@@ -52,7 +52,7 @@ const QualitySection = () => {
                     <path
                         d="M100,150 C250,150 250,250 400,250 C550,250 550,150 700,150 C850,150 850,250 1000,250"
                         fill="none"
-                        stroke="#E07A5F"
+                        stroke="#F59E0B"
                         strokeWidth="3"
                         strokeDasharray="12 12"
                         className="opacity-40"
@@ -68,7 +68,7 @@ const QualitySection = () => {
                         <SectionTag rotate="-rotate-2">
                             BEHIND THE SCENES
                         </SectionTag>
-                        <h2 className="text-6xl md:text-7xl text-[#2C1810] font-abril relative inline-block">
+                        <h2 className="text-6xl md:text-7xl text-brand-dark font-abril relative inline-block">
                             The One18 Difference
                         </h2>
                     </div>
@@ -81,7 +81,7 @@ const QualitySection = () => {
                             className={`relative group ${i % 2 === 0 ? 'lg:-mt-8' : 'lg:mt-8'}`}
                         >
                             {/* Connection Dot */}
-                            <div className="hidden lg:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-[#E07A5F] rounded-full z-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-[0_0_10px_rgba(224,122,95,0.5)]" />
+                            <div className="hidden lg:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-brand-accent rounded-full z-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 shadow-[0_0_10px_rgba(224,122,95,0.5)]" />
 
                             <div className={`
                                 relative z-10 h-full p-6 rounded-[2rem] ${step.color}
@@ -99,7 +99,7 @@ const QualitySection = () => {
                             </div>
 
                             {/* Number Background */}
-                            <div className="absolute -top-8 -right-4 text-[6rem] font-abril text-black/5 select-none pointer-events-none group-hover:text-[#E07A5F]/10 transition-colors z-0 leading-none">
+                            <div className="absolute -top-8 -right-4 text-[6rem] font-abril text-black/5 select-none pointer-events-none group-hover:text-brand-accent/10 transition-colors z-0 leading-none">
                                 {i + 1}
                             </div>
                         </div>
