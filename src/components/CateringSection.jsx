@@ -21,7 +21,7 @@ const CateringSection = () => {
 
                     {/* Text Content - Spans 5 columns */}
                     <div className="lg:col-span-5 space-y-4 lg:space-y-8">
-                        <SectionTag rotate="-rotate-2">
+                        <SectionTag rotate="-rotate-2" colorClass="bg-brand-accent text-brand-dark">
                             PREMIUM SERVICE
                         </SectionTag>
 
