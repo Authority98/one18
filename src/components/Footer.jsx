@@ -34,19 +34,19 @@ const Footer = () => {
                 {/* Gradient definitions matching footer */}
                 <defs>
                     <linearGradient id="footerGradient1" x1="0%" y1="0%" x2="100%" y2="0%">
-                        <stop offset="0%" stopColor="#1E3A8A" />
-                        <stop offset="50%" stopColor="#3949AB" />
-                        <stop offset="100%" stopColor="#1E3A8A" />
+                        <stop offset="0%" stopColor="#16369F" />
+                        <stop offset="50%" stopColor="#16369F" />
+                        <stop offset="100%" stopColor="#16369F" />
                     </linearGradient>
                     <linearGradient id="footerGradient2" x1="0%" y1="0%" x2="100%" y2="0%">
-                        <stop offset="0%" stopColor="#1E3A8A" />
-                        <stop offset="50%" stopColor="#3949AB" />
-                        <stop offset="100%" stopColor="#1E3A8A" />
+                        <stop offset="0%" stopColor="#16369F" />
+                        <stop offset="50%" stopColor="#16369F" />
+                        <stop offset="100%" stopColor="#16369F" />
                     </linearGradient>
                     <linearGradient id="footerGradient3" x1="0%" y1="0%" x2="100%" y2="0%">
-                        <stop offset="0%" stopColor="#1E3A8A" />
-                        <stop offset="50%" stopColor="#3949AB" />
-                        <stop offset="100%" stopColor="#1E3A8A" />
+                        <stop offset="0%" stopColor="#16369F" />
+                        <stop offset="50%" stopColor="#16369F" />
+                        <stop offset="100%" stopColor="#16369F" />
                     </linearGradient>
                 </defs>
             </svg>

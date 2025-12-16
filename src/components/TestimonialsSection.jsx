@@ -50,7 +50,7 @@ const TestimonialsSection = () => {
                 <div className="absolute top-[-10%] right-[-5%] w-[600px] h-[600px] bg-brand-accent/5 rounded-full blur-3xl"></div>
                 <div className="absolute bottom-[-10%] left-[-5%] w-[500px] h-[500px] bg-brand-dark/5 rounded-full blur-3xl"></div>
                 <svg className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] opacity-[0.03]" viewBox="0 0 100 100" preserveAspectRatio="none">
-                    <path d="M0 50 Q 25 0 50 50 T 100 50" fill="none" stroke="#1E3A8A" strokeWidth="0.5" />
+                    <path d="M0 50 Q 25 0 50 50 T 100 50" fill="none" stroke="#16369F" strokeWidth="0.5" />
                     <path d="M0 30 Q 25 80 50 30 T 100 30" fill="none" stroke="#F59E0B" strokeWidth="0.5" />
                 </svg>
             </div>

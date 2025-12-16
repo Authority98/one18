@@ -5,11 +5,11 @@
 @tailwind utilities;
 
 :root {
-  --brand-dark: #1E3A8A;
+  --brand-dark: #16369F;
   --brand-accent: #F59E0B;
   --brand-gold: #FFD54F;
   --brand-cream: #FFFFFF;
-  --brand-green: #3949AB;
+  --brand-green: #16369F;
 }
 
 * {
@@ -114,7 +114,7 @@ body {
 }
 
 .text-stroke {
-  -webkit-text-stroke: 1px #1E3A8A;
+  -webkit-text-stroke: 1px #16369F;
   color: transparent;
 }
 
